@@ -1,6 +1,8 @@
-![alt tag](https://raw.github.com/miromannino/MiroWPTheme/master/screenshot.png)
-
 Miro is a Minimal, Clean and Responsive WordPress Theme which adapts itself automatically for tablets and mobile devices. Theme is customizable with theme options: you can configure the title to show a logo (or a generic html piece of code), configure the social buttons to display, and other parts of the layout. A set of shortcodes will help you to generate complex portfolios (not a simple gallery of images). Realized with Bootstrap, it brings all of its power in your blog.
+
+# Screenshot
+
+![alt tag](https://raw.github.com/miromannino/MiroWPTheme/master/screenshot.png)
 
 # Live Demo
 
