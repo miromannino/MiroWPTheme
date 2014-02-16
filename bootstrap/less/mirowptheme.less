@@ -1,0 +1,52 @@
+code {
+	color: inherit;
+	background-color: inherit;
+}
+
+.navbar-nav > li > a {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.navbar-nav > li {
+	margin-top: 29px;
+	margin-bottom: 25px;
+}
+
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+	padding: 17px 15px 17px 0;
+	font-size: 30px;
+	line-height: 50px;
+	height: 84px;
+}
+
+.navbar>.container .navbar-brand img, .navbar>.container-fluid .navbar-brand img {
+	vertical-align: top;
+}
+
+.navbar-toggle {
+	margin-top: 25px !important;
+	margin-bottom: 25px !important;
+}
+
+.navbar-toggle {
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+.btn.btn-info:hover { 
+	background-color: @brand-primary;
+	color: @brand-info;
+	border-color: @brand-info;
+}
+
+@media (max-width: @grid-float-breakpoint-max) {
+	.navbar-nav>li {
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+		border-color: #eee;
+	}
+}
