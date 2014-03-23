@@ -14,7 +14,6 @@ Tags: white, light, green, black, one-column, two-columns, left-sidebar, right-s
 ----------------------------------------------- */
 body, input, textarea {
 	color: #666;
-	font-family: Helvetica, Arial, sans-serif;
 	font-weight: 300;
 }
 
@@ -24,7 +23,6 @@ body, input, textarea {
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
 	clear: both;
-	font-family: Oswald, sans-serif;
 	font-weight: 300;
 	color: #555;
 	margin: 0 0 .7em;
@@ -172,9 +170,9 @@ header.entry-meta {
 header.entry-meta .post-date {
 	text-align: center;
 	letter-spacing: 1px;
-	background-color: #E6F95B;
+	background-color: #F8775E;
+	color: #FFF;
 	padding: 8px;
-	font-weight: bold;
 }
 header.entry-meta .post-date span {
 	display: block;
@@ -690,7 +688,7 @@ a.comment-reply-link {
 
 /* Comment Form */
 #respond {
-	background: rgba(250, 255, 249, 0.47);;
+	background: rgba(247, 244, 242, 0.47);
 	border: 1px solid #ddd;
 	border:1px solid rgba(0,0,0,.08);
 	color: #444;
@@ -871,9 +869,7 @@ a.comment-reply-link {
 		display: inline-block;
 		text-align: center;
 		letter-spacing: 1px;
-		background-color: #E6F95B;
 		padding: 5px;
-		font-weight: bold;
 	}
 	header.entry-meta .post-date span {
 		display: inline;
