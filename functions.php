@@ -447,7 +447,7 @@ function sc_pf_entryLink( $atts, $content = null ) {
 
 	return	'<a href="' 
 				. $href . '"' . ((strlen($target) == 0)? '' : (' target="' . $target . '"')) 
-				. 'class="btn btn-info btn-xs">' . $content . '</a>';
+				. 'class="btn btn-primary btn-xs">' . $content . '</a>';
 
 }
 
@@ -472,7 +472,7 @@ function sc_button( $atts, $content = null ) {
 
 	$ris = '';
 
-	$ris = '<a class="btn btn-info btn-sm" href="' . $href . '"' . ((strlen($target) == 0)? '' : (' target="' . $target . '"')) . '>' . $content . '</a>';
+	$ris = '<a class="btn btn-primary btn-sm" href="' . $href . '"' . ((strlen($target) == 0)? '' : (' target="' . $target . '"')) . '>' . $content . '</a>';
 
 	return $ris;
 
