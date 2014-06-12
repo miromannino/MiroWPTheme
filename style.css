@@ -239,7 +239,6 @@ header.entry-meta .post-comments a:hover {
 }
 .page .entry-content, .entry-summary {
 	margin-top: 20px;
-	min-height: 80px;
 }
 .more-link {
 	display: inline-block;
