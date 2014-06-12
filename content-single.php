@@ -62,7 +62,7 @@
 
 	<?php 
 		if (get_theme_mod('socialbuttonspost', false)) {
-			entry_social_buttons('bottom');
+			entry_social_buttons('bottom', get_post_custom_values('extra_button'));
 		}
 	?>
 

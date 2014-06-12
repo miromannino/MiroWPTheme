@@ -282,7 +282,7 @@ function add_social_buttons_scripts() {
 }
 add_action('wp_enqueue_scripts','add_social_buttons_scripts');
 
-function entry_social_buttons($position = 'bottom') {
+function entry_social_buttons($position = 'bottom', $extra_buttons = null) {
 ?>
 	<div class="entry-social-buttons <?php echo (($position == 'top')? 'top' : 'bottom'); ?>">
 		<div class="entry-social-button button-googleplus">
@@ -298,6 +298,15 @@ function entry_social_buttons($position = 'bottom') {
 			<div id="fb-root"></div>
 			<div class="fb-like" data-href="<?php echo(get_permalink()); ?>" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
 		</div>
+			<?php
+			if(!is_null($extra_buttons)) {
+				foreach ($extra_buttons as $key => $value ) {
+					echo('<div class="entry-social-button">');
+					echo($value);
+					echo('</div>');
+				}
+			}
+		?>
 		<div class="entry-social-button-end"></div>
 	</div>
 <?php

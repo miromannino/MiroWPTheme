@@ -14,7 +14,7 @@
 
 	<?php 
 		if (get_theme_mod('socialbuttonspagetop', false)) {
-			entry_social_buttons('top');
+			entry_social_buttons('top', get_post_custom_values('extra_button'));
 		}
 	?>
 
@@ -24,7 +24,7 @@
 
 	<?php 
 		if (get_theme_mod('socialbuttonspagebottom', false)) {
-			entry_social_buttons('bottom');
+			entry_social_buttons('bottom', get_post_custom_values('extra_button'));
 		}
 	?>
 	
