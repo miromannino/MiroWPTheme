@@ -8,7 +8,7 @@
 
 get_header(); ?>
 
-		<section id="primary">
+		<section id="primary" class="fadeIn fadeInD1">
 			<div id="content" role="main">
 
 			<?php if ( have_posts() ) : ?>

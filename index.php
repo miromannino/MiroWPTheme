@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-		<div id="primary">
+		<div id="primary" class="fadeIn fadeInD1">
 			<div id="content" role="main">
            
 				<?php /* Start the Loop */ ?>

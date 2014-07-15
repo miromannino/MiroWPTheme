@@ -8,7 +8,7 @@
 
 get_header(); ?>
 
-		<div id="primary" class="image-attachment">
+		<div id="primary" class="image-attachment fadeIn fadeInD1">
 			<div id="content" role="main">
 
 			<?php the_post(); ?>

@@ -6,7 +6,7 @@
  * @subpackage MiroWPTheme
  */
 ?>
-		<div id="secondary" class="widget-area" role="complementary">
+		<div id="secondary" class="widget-area fadeIn fadeInD2" role="complementary">
 			<?php if ( ! dynamic_sidebar( 'sidebar' ) ) : ?>
 
 				<aside id="archives" class="widget">

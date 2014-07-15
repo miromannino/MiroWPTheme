@@ -68,6 +68,66 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h6 a:hover {
 	line-height: 1.7 !important;
 }
 
+/* Animations */
+@-webkit-keyframes fadeIn{
+	0%{opacity:0}
+	100%{opacity:1}
+}
+@-moz-keyframes fadeIn{
+	0%{opacity:0}
+	100%{opacity:1}
+}
+@-o-keyframes fadeIn{
+	0%{opacity:0}
+	100%{opacity:1}
+}
+@keyframes fadeIn{
+	0%{opacity:0}
+	100%{opacity:1}
+}
+.fadeIn{
+	-webkit-animation-name:fadeIn;
+	-moz-animation-name:fadeIn;
+	-o-animation-name:fadeIn;
+	animation-name:fadeIn
+
+	-webkit-transform:translate3d(0,0,0);
+	-webkit-animation-fill-mode:both;
+	-moz-animation-fill-mode:both;
+	-ms-animation-fill-mode:both;
+	-o-animation-fill-mode:both;
+	animation-fill-mode:both;
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	-ms-animation-duration:1s;
+	-o-animation-duration:1s;
+	animation-duration:1s
+}
+
+.fadeInD1 {
+	-webkit-animation-delay:0.2s;
+	-moz-animation-delay:0.2s;
+	-ms-animation-delay:0.2s;
+	-o-animation-delay:0.2s;
+	animation-delay:0.2s; 
+}
+
+.fadeInD2 {
+	-webkit-animation-delay:0.4s;
+	-moz-animation-delay:0.4s;
+	-ms-animation-delay:0.4s;
+	-o-animation-delay:0.4s;
+	animation-delay:0.4s; 
+}
+
+.fadeInD3 {
+	-webkit-animation-delay:0.6s;
+	-moz-animation-delay:0.6s;
+	-ms-animation-delay:0.6s;
+	-o-animation-delay:0.6s;
+	animation-delay:0.6s; 
+}
+
 /* Layout
 ----------------------------------------------- */
 body {
@@ -86,6 +146,9 @@ body {
 #primary {
 	float: left;
 	width: 730px;
+}
+#primary.primary-fullscreen {
+	width: initial;	
 }
 #secondary {
 	float:right;
@@ -162,7 +225,6 @@ header.entry-meta {
 	float:left;
 	width:60px;
 	color:#666;
-	font-family: Oswald, sans-serif;
 	text-transform: uppercase;
 	font-size:12px;
 	z-index: -2;
@@ -173,6 +235,8 @@ header.entry-meta .post-date {
 	background-color: #F8775E;
 	color: #FFF;
 	padding: 8px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
 }
 header.entry-meta .post-date span {
 	display: block;
@@ -190,9 +254,11 @@ header.entry-meta .post-comments {
 	background-color: #444;
 	color: #eee;
 	padding: 8px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
 }
 header.entry-meta .post-comments .comments-label {
-	font-size: 10px;
+	font-size: 8px;
 }
 header.entry-meta .post-comments .value {
 	font-size: 20px;
@@ -483,6 +549,7 @@ p img, .wp-caption {
 	font-weight: bold;
 	line-height: 2em;
 }
+
 #nav-above {
 	padding: 0 0 1.4em;
 }
@@ -494,6 +561,10 @@ p img, .wp-caption {
 	float: right;
 	text-align: right;
 	width: 50%;
+}
+
+nav.navbar .navbar-nav > li.active > a {
+	background: #ccc;
 }
 
 /* Widgets
@@ -598,7 +669,7 @@ p img, .wp-caption {
 	padding-left:86px;
 }
 .commentlist > li.comment {
-	background: rgba(247, 244, 242, 0.47);
+	background: rgba(247, 244, 242, 0.2);
 	border: 1px solid #ddd;
 	border:1px solid rgba(0,0,0,.08);
 	margin: 0 0 1.4em;
@@ -687,7 +758,7 @@ a.comment-reply-link {
 
 /* Comment Form */
 #respond {
-	background: rgba(247, 244, 242, 0.47);
+	background: rgba(247, 244, 242, 0.2);
 	border: 1px solid #ddd;
 	border:1px solid rgba(0,0,0,.08);
 	color: #444;
@@ -787,7 +858,6 @@ a.comment-reply-link {
 ----------------------------------------------- */
 #colophon {
 	clear: both;
-	font-family: Oswald, sans-serif;
 	font-weight: 400;
 }
 #site-generator {
@@ -859,7 +929,6 @@ a.comment-reply-link {
 		float: left;
 		width: 100%;
 		color: #666;
-		font-family: Oswald, sans-serif;
 		text-transform: uppercase;
 		font-size:12px;
 		margin-bottom: 20px;
@@ -869,6 +938,7 @@ a.comment-reply-link {
 		text-align: center;
 		letter-spacing: 1px;
 		padding: 5px;
+		border-radius: initial;
 	}
 	header.entry-meta .post-date span {
 		display: inline;
@@ -879,10 +949,10 @@ a.comment-reply-link {
 	}
 	header.entry-meta .post-comments {
 		display: inline-block;
-		font-weight: bold;
 		background-color: #444;
 		color: #eee;
 		padding: 5px;
+		border-radius: initial;
 	}
 	header.entry-meta .post-comments .comments-label, header.entry-meta .post-comments .value {
 		font-size: 12px;
@@ -975,10 +1045,8 @@ h2.pf-entryTitle {
 	color: #333; 
 	font-weight: 500; 
 	font-size: 13px; 
-	font-family: Oswald, sans-serif;
 }
 .pf-entryAttr .attrValue {
-	font-family: Oswald, sans-serif;
 	font-size: 13px; 
 }
 .pf-entryLinks { 
@@ -1001,7 +1069,6 @@ h2.pf-entryTitle {
 	font-size: 14px;
 	display: inline-block;
 	text-decoration: none;
-	font-family: Oswald, sans-serif;
 	font-weight: 400;
 }
 .pf-entryLinks .entryLink a:hover {

@@ -7,7 +7,7 @@
  */
 ?>
 
-	<header class="entry-meta">
+	<header class="entry-meta fadeIn fadeInD3">
 		<div class="post-date">
 			<time class="entry-date" datetime="<?php echo get_the_date( 'c' ); ?>" pubdate>
 				<span class="month"><?php echo get_the_date('M'); ?></span>
