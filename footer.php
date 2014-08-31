@@ -8,9 +8,6 @@
  * @subpackage MiroWPTheme
  */
 ?>
-
-	</div><!-- #main -->
-
 	<footer id="colophon" role="contentinfo">
             <div id="site-generator">          
             	<?php _e( 'Powered by ', 'miro' ); ?><a href="<?php echo esc_url( __( 'http://www.wordpress.org', 'miro' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'miro' ); ?>" rel="generator"><?php _e( 'WordPress', 'miro' ); ?></a>

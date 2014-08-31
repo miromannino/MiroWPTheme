@@ -7,10 +7,10 @@
  */
 
 get_header(); ?>
-
+	<div id="main" class="main-fullscreen clearfix">
 		<div id="primary" class="primary-fullscreen fadeIn fadeInD1">
 			<div id="content" role="main">
-            
+	        
 				<?php the_post(); ?>
 
 				<?php get_template_part( 'content', 'page' ); ?>
@@ -19,5 +19,5 @@ get_header(); ?>
 
 			</div><!-- #content -->
 		</div><!-- #primary -->
-
+	</div><!-- #main -->
 <?php get_footer(); ?>

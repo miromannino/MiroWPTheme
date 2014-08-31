@@ -109,5 +109,3 @@
 				?>
 			</nav>-->
 	</header><!-- #branding -->
-
-	<div id="main" class="clearfix">

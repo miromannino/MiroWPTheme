@@ -7,7 +7,7 @@
  */
 
 get_header(); ?>
-
+	<div id="main" class="clearfix">
 		<div id="primary" class="fadeIn fadeInD1">
             
 			<div id="content" role="main">
@@ -25,6 +25,6 @@ get_header(); ?>
 			</div><!-- #content -->
 		</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
-
+		<?php get_sidebar(); ?>
+	</div><!-- #main -->
 <?php get_footer(); ?>

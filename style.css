@@ -905,6 +905,9 @@ a.comment-reply-link {
 	#main {
 		margin-right: 280px;
 	}
+	#main.main-fullscreen {
+		margin-right: 0;	
+	}
 	#primary {
 		float: left;
 		margin-right: 0;

@@ -13,7 +13,7 @@
  */
 
 get_header(); ?>
-
+	<div id="main" class="clearfix">
 		<div id="primary" class="fadeIn fadeInD1">
 			<div id="content" role="main">
            
@@ -27,8 +27,8 @@ get_header(); ?>
 				<?php miro_content_nav( 'nav-below' ); ?>
 
 			</div><!-- #content -->
-		</div><!-- #primary -->
-        
-<?php get_sidebar(); ?>
+		</div><!-- #primary -->    
 
+		<?php get_sidebar(); ?>
+	</div><!-- #main -->
 <?php get_footer(); ?>

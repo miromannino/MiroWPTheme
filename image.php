@@ -7,7 +7,7 @@
  */
 
 get_header(); ?>
-
+	<div id="main" class="clearfix">
 		<div id="primary" class="image-attachment fadeIn fadeInD1">
 			<div id="content" role="main">
 
@@ -93,5 +93,5 @@ get_header(); ?>
 
 			</div><!-- #content -->
 		</div><!-- #primary -->
-
+	</div><!-- #main -->
 <?php get_footer(); ?>
