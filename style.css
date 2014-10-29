@@ -34,12 +34,13 @@ hr {
 	margin-bottom: 1.4em;
 }
 /* Links */
+/* Have problems with the justified gallery
 a {
 	-webkit-transition: all 0.2s ease 0s; 
 	-moz-transition: all 0.2s ease 0s; 
 	-o-transition: all 0.2s ease 0s; 
 	transition: all 0.2s ease 0s; 
-}
+}*/
 a:focus,
 a:active,
 a:hover {
@@ -72,23 +73,23 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h6 a:hover {
 }
 
 /* Animations */
-@-webkit-keyframes fadeIn{
+@-webkit-keyframes fadeIn {
 	0%{opacity:0}
 	100%{opacity:1}
 }
-@-moz-keyframes fadeIn{
+@-moz-keyframes fadeIn {
 	0%{opacity:0}
 	100%{opacity:1}
 }
-@-o-keyframes fadeIn{
+@-o-keyframes fadeIn {
 	0%{opacity:0}
 	100%{opacity:1}
 }
-@keyframes fadeIn{
+@keyframes fadeIn {
 	0%{opacity:0}
 	100%{opacity:1}
 }
-.fadeIn{
+.fadeIn {
 	-webkit-animation-name:fadeIn;
 	-moz-animation-name:fadeIn;
 	-o-animation-name:fadeIn;
@@ -106,7 +107,6 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h6 a:hover {
 	-o-animation-duration:1s;
 	animation-duration:1s
 }
-
 .fadeInD1 {
 	-webkit-animation-delay:0.2s;
 	-moz-animation-delay:0.2s;
@@ -114,7 +114,6 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h6 a:hover {
 	-o-animation-delay:0.2s;
 	animation-delay:0.2s; 
 }
-
 .fadeInD2 {
 	-webkit-animation-delay:0.4s;
 	-moz-animation-delay:0.4s;
@@ -122,7 +121,6 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h6 a:hover {
 	-o-animation-delay:0.4s;
 	animation-delay:0.4s; 
 }
-
 .fadeInD3 {
 	-webkit-animation-delay:0.6s;
 	-moz-animation-delay:0.6s;
