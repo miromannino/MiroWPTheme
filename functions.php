@@ -315,6 +315,10 @@ function entry_social_buttons($position = 'bottom', $extra_buttons = null) {
 /**
  * Portfolio
  */
+function doShortcode($text) {
+	return do_shortcode(str_replace('&#8221;', '"', $text));
+}
+
 
 /*
 	[pf-portfolio id="..."]...[/pf-portfolio]
@@ -330,7 +334,7 @@ function sc_pf_portfolio( $atts, $content = null ) {
 
 		add_shortcode('pf-entry', 'sc_pf_entry');
 
-        $v = do_shortcode($content);
+        $v = doShortcode($content);
 
     	remove_shortcode('pf-entry');
  
@@ -351,7 +355,7 @@ function sc_pf_entry( $atts, $content = null ) {
 	add_shortcode('pf-entryDescription', 'sc_pf_entryDescription');
 
 	$ris = '<div class="pf-entry">'
-		.   do_shortcode($content)
+		.   doShortcode($content)
 		.  '</div>';
 
 	remove_shortcode('pf-entryTitle');
@@ -391,7 +395,7 @@ function sc_pf_entryAttrList( $atts, $content = null ) {
 	if(strlen($image) == 0)
 		$ris .= '<div class="pf-entryAttrList">'
 			.   '  <div class="entryData">'
-			.       do_shortcode($content)
+			.       doShortcode($content)
 			.   '  </div>'
 			.   '</div>';
 	else
@@ -400,7 +404,7 @@ function sc_pf_entryAttrList( $atts, $content = null ) {
 			.   '   <img src="' . $image . '" class="size-medium description-image" />'
 			.   '  </div>'
 			.   '  <div class="entryData">'
-			.       do_shortcode($content)
+			.       doShortcode($content)
 			.   '  </div>'
 			.   '</div>';
 
@@ -436,7 +440,7 @@ function sc_pf_entryLinks( $atts, $content = null ) {
 	add_shortcode('pf-entryLink', 'sc_pf_entryLink');
 
 	$ris = '<div class="pf-entryLinks">'
-		.  '<span class="attrValue">' . do_shortcode($content) . '</span>'
+		.  '<span class="attrValue">' . doShortcode($content) . '</span>'
 		.  '</div>';
 
 	remove_shortcode('pf-entryLink');
