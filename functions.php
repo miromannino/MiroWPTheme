@@ -316,9 +316,15 @@ function entry_social_buttons($position = 'bottom', $extra_buttons = null) {
  * Portfolio
  */
 function doShortcode($text) {
-	return do_shortcode(str_replace('&#8221;', '"', $text));
+	$replaces = array(
+		'&#8221;' => '"',
+		'&#8220;' => '"',
+		'&#8217;' => '\'',
+		'&#8216;' => '\'',
+		'&#215;' => 'x',
+	);
+	return do_shortcode(str_replace(array_keys($replaces), array_values($replaces), $text));
 }
-
 
 /*
 	[pf-portfolio id="..."]...[/pf-portfolio]
