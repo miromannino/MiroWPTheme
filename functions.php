@@ -296,7 +296,7 @@ function entry_social_buttons($position = 'bottom', $extra_buttons = null) {
 		<div class="entry-social-button button-fblike">
 			<!-- Facebook like-->
 			<div id="fb-root"></div>
-			<div class="fb-like" data-href="<?php echo(get_permalink()); ?>" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+			<div class="fb-like" style="margin-left:30px" data-href="<?php echo(get_permalink()); ?>" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
 		</div>
 			<?php
 			if(!is_null($extra_buttons)) {
