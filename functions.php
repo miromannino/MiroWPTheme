@@ -37,9 +37,11 @@ function miro_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menu('primary', __('Primary Menu', 'miro') );
 
+	remove_filter( 'the_content', 'wpautop' );
+	remove_filter( 'the_excerpt', 'wpautop' );
+
 }
 endif; // miro_setup
-
 
 // enqueue styles
 if( !function_exists("theme_styles") ) {  
