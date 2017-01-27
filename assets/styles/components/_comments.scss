@@ -1,0 +1,79 @@
+#comments {
+  border-top: 1px solid $borders-color;
+
+  h2 {
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+
+  .comment-list {
+    @extend .list-unstyled;
+    ol {
+      list-style: none;
+    }
+    article {
+      margin-bottom: 0;
+    }
+    article.comment {
+      margin-top: 2rem;
+    }
+    .children article.comment {
+      margin-top: 1rem;
+    }
+    .comment-meta {
+      .comment-author {
+        line-height: 0.9rem;
+
+        img {
+          border-radius: .25rem;
+          vertical-align: top;
+          float: left;
+        }
+        cite {
+          font-size: 0.8rem;
+          margin-left: 1rem;
+        }
+      }
+      time {
+        margin-left: 1rem;
+        font-size: 0.6rem;
+      }
+      .comment-edit-link {
+        font-size: 0.7rem;
+      }
+    }
+    .comment-content {
+      font-size: 0.8rem;
+      margin-top: 0.8rem;
+
+      p {
+        margin-bottom: 0.5rem;
+      }
+    }
+    .reply {
+      font-size: 0.7rem;
+    }
+    .comment-respond {
+      margin-top: 1rem;
+    }
+  }
+
+  .comment-respond {
+    margin-top: 2rem; 
+    .comment-form {
+      p {
+        @extend .form-group;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="url"],
+      textarea {
+        @extend .form-control;
+      }
+      input[type="submit"] {
+        @extend .btn;
+        @extend .btn-secondary;
+      }
+    }
+  }
+}

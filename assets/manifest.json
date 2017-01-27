@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "scripts/main.js"
+      ],
+      "main": true
+    },
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ],
+      "main": true
+    },
+    "customizer.js": {
+      "files": [
+        "scripts/customizer.js"
+      ]
+    },
+    "jquery.js": {
+      "bower": ["jquery"]
+    },
+    "headers.js": {
+      "files": [
+        "scripts/headers.js"
+      ],
+      "main": true
+    }
+  },
+  "config": {
+    "devUrl": "http://localhost/~miro/miromannino/"
+  }
+}

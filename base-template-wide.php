@@ -1,0 +1,29 @@
+<?php
+
+use Roots\Sage\Setup;
+use Roots\Sage\Wrapper;
+
+?>
+
+  <?php include 'base-header.php'; ?>
+
+  <div class="header-img-container"><svg id="graph"/></div>
+
+  <div class="content-container content-container-img-header">
+    <div class="wrap container container-wide fadeIn" role="document">
+      <div class="content row">
+        <main class="main">
+          <?php include Wrapper\template_path(); ?>
+        </main><!-- /.main -->
+        <?php if (Setup\display_sidebar()) : ?>
+          <aside class="sidebar">
+            <?php include Wrapper\sidebar_path(); ?>
+          </aside><!-- /.sidebar -->
+        <?php endif; ?>
+      </div><!-- /.content -->
+    </div><!-- /.wrap -->
+  </div><!-- /.content-container-img-header -->
+
+  <footer class="footer footer-wide">
+    <?php include 'base-footer.php' ?>
+  </footer>

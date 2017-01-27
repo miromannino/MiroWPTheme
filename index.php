@@ -1,34 +1,14 @@
-<?php
-/**
- * The main template file.
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage MiroWPTheme
- */
+<?php get_template_part('templates/page', 'header'); ?>
 
-get_header(); ?>
-	<div id="main" class="clearfix">
-		<div id="primary" class="fadeIn fadeInD1">
-			<div id="content" role="main">
-           
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+<?php if (!have_posts()) : ?>
+  <div class="alert alert-warning">
+    <?php _e('Sorry, no results were found.', 'sage'); ?>
+  </div>
+  <?php get_search_form(); ?>
+<?php endif; ?>
 
-					<?php get_template_part( 'content', 'index' ); ?>
+<?php while (have_posts()) : the_post(); ?>
+  <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
+<?php endwhile; ?>
 
-				<?php endwhile; ?>
-
-				<?php miro_content_nav( 'nav-below' ); ?>
-
-			</div><!-- #content -->
-		</div><!-- #primary -->    
-
-		<?php get_sidebar(); ?>
-	</div><!-- #main -->
-<?php get_footer(); ?>
+<?php the_posts_navigation(); ?>

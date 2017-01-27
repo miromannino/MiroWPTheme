@@ -1,144 +1,124 @@
-Miro is a Minimal, Clean and Responsive WordPress Theme which adapts itself automatically for tablets and mobile devices. Theme is customizable with theme options: you can configure the title to show a logo (or a generic html piece of code), configure the social buttons to display, and other parts of the layout. A set of shortcodes will help you to generate complex portfolios (not a simple gallery of images). Realized with Bootstrap, it brings all of its power in your blog.
+# [Sage](https://roots.io/sage/)
+[![Build Status](https://travis-ci.org/roots/sage.svg)](https://travis-ci.org/roots/sage)
+[![devDependency Status](https://david-dm.org/roots/sage/dev-status.svg)](https://david-dm.org/roots/sage#info=devDependencies)
 
-# Screenshot
+Sage is a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and Bootstrap Sass, that will help you make better themes.
 
-![alt tag](https://raw.github.com/miromannino/MiroWPTheme/master/screenshot.png)
+* Source: [https://github.com/roots/sage](https://github.com/roots/sage)
+* Homepage: [https://roots.io/sage/](https://roots.io/sage/)
+* Documentation: [https://roots.io/sage/docs/](https://roots.io/sage/docs/)
+* Twitter: [@rootswp](https://twitter.com/rootswp)
+* Newsletter: [Subscribe](http://roots.io/subscribe/)
+* Forum: [https://discourse.roots.io/](https://discourse.roots.io/)
 
-# Live Demo
+## Requirements
 
-You can see a demo in http://miromannino.com
+| Prerequisite    | How to check | How to install
+| --------------- | ------------ | ------------- |
+| PHP >= 5.4.x    | `php -v`     | [php.net](http://php.net/manual/en/install.php) |
+| Node.js >= 4.5  | `node -v`    | [nodejs.org](http://nodejs.org/) |
+| gulp >= 3.8.10  | `gulp -v`    | `npm install -g gulp` |
+| Bower >= 1.3.12 | `bower -v`   | `npm install -g bower` |
 
+For more installation notes, refer to the [Install gulp and Bower](#install-gulp-and-bower) section in this document.
 
-# Social Buttons
+## Features
 
-From the Theme options, you can configure the social buttons: Facebook, Twitter and Google+. You can decide to display them in the top of a page, in the bottom of a page, and in the bottom of a post. Social buttons example
+* [gulp](http://gulpjs.com/) build script that compiles both Sass and Less, checks for JavaScript errors, optimizes images, and concatenates and minifies files
+* [BrowserSync](http://www.browsersync.io/) for keeping multiple browsers and devices synchronized while testing, along with injecting updated CSS and JS into your browser while you're developing
+* [Bower](http://bower.io/) for front-end package management
+* [asset-builder](https://github.com/austinpray/asset-builder) for the JSON file based asset pipeline
+* [Bootstrap](http://getbootstrap.com/)
+* [Theme wrapper](https://roots.io/sage/docs/theme-wrapper/)
+* ARIA roles and microformats
+* Posts use the [hNews](http://microformats.org/wiki/hnews) microformat
+* [Multilingual ready](https://roots.io/wpml/) and over 30 available [community translations](https://github.com/roots/sage-translations)
 
+Install the [Soil](https://github.com/roots/soil) plugin to enable additional features:
 
-# Buttons
+* Cleaner output of `wp_head` and enqueued assets
+* Cleaner HTML output of navigation menus
+* Root relative URLs
+* Nice search (`/search/query/`)
+* Google CDN jQuery snippet from [HTML5 Boilerplate](http://html5boilerplate.com/)
+* Google Analytics snippet from [HTML5 Boilerplate](http://html5boilerplate.com/)
 
-To add a generic button you can use the shortcode [button]. This one has two possible parameters: href and target. The button works like a standard link. The target is optional.
+See a complete working example in the [roots-example-project.com repo](https://github.com/roots/roots-example-project.com).
 
-For example:
+## Theme installation
 
-[button href="http://miromannino.com" target="_blank"]link to my site[/button]
+Install Sage by copying the project into a new folder within your WordPress themes directory.
 
+Make sure [Composer](https://getcomposer.org/download/) has been installed before moving on.
 
-# Portfolio Shortcodes
+Install Sage using Composer from your WordPress themes directory (replace `your-theme-name` below with the name of your theme):
 
-To create a portfolio page use these shortcodes:
+```shell
+# @ example.com/site/web/app/themes/
+$ composer create-project roots/sage your-theme-name 8.5.0
+```
 
-[pf-portfolio]
-  ...
-[/pf-portfolio]
+## Theme setup
 
-The content of portfolio shortcodes are cached. The cache ID is related to the page ID, for this reason you should use only one pf-portfolio per page. But, if you want to use more pf-portfolio, you can use the id attribute:
+Edit `lib/setup.php` to enable or disable theme features, setup navigation menus, post thumbnail sizes, post formats, and sidebars.
 
-[pf-portfolio id="1"]
-  ...
-[/pf-portfolio]
+## Theme development
 
-  ...
+Sage uses [gulp](http://gulpjs.com/) as its build system and [Bower](http://bower.io/) to manage front-end packages.
 
-[pf-portfolio id="2"]
-  ...
-[/pf-portfolio]
+### Install gulp and Bower
 
-If in the latter example you don’t use the id attributes, the second portfolio will be the same of the first, because they have the same cache id.
+Building the theme requires [node.js](http://nodejs.org/download/). We recommend you update to the latest version of npm: `npm install -g npm@latest`.
 
-Remember that the cache store the pages for 1 hour, any changes is not visible after you change the page. If you want to force a refresh, you can change the id attributes.
+From the command line:
 
+1. Install [gulp](http://gulpjs.com) and [Bower](http://bower.io/) globally with `npm install -g gulp bower`
+2. Navigate to the theme directory, then run `npm install`
+3. Run `bower install`
 
-## Entries
+You now have all the necessary dependencies to run the build process.
 
-The portfolio has various entries:
+### Available gulp commands
 
-[pf-portfolio]
-	
-  [pf-entry]
-    ...
-  [/pf-entry]
+* `gulp` — Compile and optimize the files in your assets directory
+* `gulp watch` — Compile assets when file changes are made
+* `gulp --production` — Compile assets for production (no source maps).
 
-  [pf-entry]
-    ...
-  [/pf-entry]
-	
-[/pf-portfolio]
+### Using BrowserSync
 
+To use BrowserSync during `gulp watch` you need to update `devUrl` at the bottom of `assets/manifest.json` to reflect your local development hostname.
 
-## Title
+For example, if your local development URL is `http://project-name.dev` you would update the file to read:
+```json
+...
+  "config": {
+    "devUrl": "http://project-name.dev"
+  }
+...
+```
+If your local development URL looks like `http://localhost:8888/project-name/` you would update the file to read:
+```json
+...
+  "config": {
+    "devUrl": "http://localhost:8888/project-name/"
+  }
+...
+```
 
-Each entry has a title, usually it links to the project page:
+## Documentation
 
-[pf-entryTitle href="http://myblog.com/myProjectPage/"]My Title[/pf-entryTitle]
+Sage documentation is available at [https://roots.io/sage/docs/](https://roots.io/sage/docs/).
 
-you can also have a title without a link:
+## Contributing
 
-[pf-entryTitle]My Title[/pf-entryTitle]
+Contributions are welcome from everyone. We have [contributing guidelines](https://github.com/roots/guidelines/blob/master/CONTRIBUTING.md) to help you get started.
 
-## Attributes list
+## Community
 
-Each entry has a list of attributes too. This is an example of that list:
+Keep track of development and community news.
 
-[pf-entryAttrList image="http://myImageLink"]
-
-  [pf-entryAttr label="Category"]Wordpress plugin[/pf-entryAttr]
-  [pf-entryAttr label="Release Date"]07/2012[/pf-entryAttr]
-  [pf-entryAttr label="Technologies"]PHP, Javascript, CSS, HTML[/pf-entryAttr]
-  [pf-entryAttr label="Download"]<a href="...">version 1.0</a>[/pf-entryAttr]
-  ...
-			
-  [pf-entryLinks]
-    [pf-entryLink href="http://myblog.com/myProjectPage/"]Project Page[/pf-entryLink]
-    [pf-entryLink href="http://github.com/myProjectPage/" target="_blank"]GitHub page[/pf-entryLink]
-  [/pf-entryLinks]
-[/pf-entryAttrList]
-
-As you can see, the entryAttrList has an optional image (using the image attribute), and its width should be 260px. Then, the last attribute can be a list of useful links (like the one that points to the project page and so on).
-
-
-## Description
-
-The description give a short description of the entry. You can use it like this:
-
-[pf-entryDescription]
-  My Description ...
-[/pf-entryDescription]
-
-A Complete example
-
-Complete entry example:
-
-[pf-portfolio]
-
-  [pf-entry]
-
-    [pf-entryTitle href="http://myblog.com/myProjectPage/"]My Title[/pf-entryTitle]
-
-    [pf-entryAttrList image="http://myImageLink"]
-
-      [pf-entryAttr label="Category"]Wordpress plugin[/pf-entryAttr]
-      [pf-entryAttr label="Release Date"]07/2012[/pf-entryAttr]
-      [pf-entryAttr label="Technologies"]PHP, Javascript, CSS, HTML[/pf-entryAttr]
-      [pf-entryAttr label="Download"]<a href="...">version 1.0</a>[/pf-entryAttr]
-      ...
-			
-      [pf-entryLinks]
-        [pf-entryLink href="http://myblog.com/myProjectPage/"]Project Page[/pf-entryLink]
-        [pf-entryLink href="http://github.com/myProjectPage/" target="_blank"]GitHub page[/pf-entryLink]
-      [/pf-entryLinks]
-    [/pf-entryAttrList]
-
-    [pf-entryDescription]
-      My Description ...
-    [/pf-entryDescription]
-
-  [/pf-entry]
-	
-  ... other entries
-	
-[/pf-portfolio]
-
-
-# Recommendations
-
-If you try to write a page using these shortcodes, probably WordPress will add extra spaces, because the wpautop is enabled. Disable this option in the pages where you use the shortcodes, for example using the plugin called wpautop-control.
+* Participate on the [Roots Discourse](https://discourse.roots.io/)
+* Follow [@rootswp on Twitter](https://twitter.com/rootswp)
+* Read and subscribe to the [Roots Blog](https://roots.io/blog/)
+* Subscribe to the [Roots Newsletter](https://roots.io/subscribe/)
+* Listen to the [Roots Radio podcast](https://roots.io/podcast/)

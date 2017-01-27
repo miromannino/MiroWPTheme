@@ -1,0 +1,49 @@
+.portfolio {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  .portfolio-entry {
+    margin-bottom: 2rem;
+
+    h3, h3 > a {
+      color: $headings-color;
+      margin-bottom: 1rem;
+      margin-top: 3rem;
+
+      &:hover {
+        color: $link-color;
+      }
+    }
+
+    .portfolio-attrs {
+      margin-bottom: 0.5rem;
+      .figure {
+        margin: 0; 
+        > img { width:100%; }
+      }
+
+      .portfolio-attr {
+        font-size: 0.8rem;
+        border-bottom: 1px solid #ccc;
+        padding: 4px;
+
+        .attr-label {
+          font-weight: bold;
+        }
+
+      }
+
+      .portfolio-links {
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    .portfolio-description {
+      margin-bottom: 3rem;
+      p { margin-bottom: 0.5rem; }
+    }
+
+  }
+
+}

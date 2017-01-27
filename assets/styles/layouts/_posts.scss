@@ -1,0 +1,75 @@
+// Post, even when it is shown in the list of posts
+article {
+  margin-bottom: 2rem;
+
+  h2 {
+    margin: 0 0 0.8rem 0;
+  }
+
+  h2,h3,h4,h5,h6 {
+    a {
+      color: $headings-color;
+    }
+    a:hover {
+      color: $link-color;
+    }
+  }
+
+  .entry-summary {
+    margin-bottom: 1rem;
+  }
+
+  .entry-meta {
+    .wp-post-image {
+      width: 100%;
+      margin-bottom: 0.8rem;
+      border: 1px solid $borders-color;
+    }
+  }
+
+  .categories {
+    font-family: $headings-font-family;
+    font-size: 0.8rem;
+
+    a {
+      color: $ui-link-color;
+      margin-right: 0.4rem;
+      &:hover {
+        color: $link-color;
+      }
+      &:before {
+        content: '#';
+        color: darken($ui-link-color, 10%);
+      }
+    }
+  }
+
+  .post-date {
+    font-family: $headings-font-family;
+    font-size: 0.8rem;
+    color: $ui-link-color;
+    margin-top: 0.5rem;
+  }
+  
+}
+
+.navigation.posts-navigation {
+  margin-bottom: 2rem;
+}
+
+// Post, when shown in a sigle page
+.single-post article {
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  .entry-meta img {
+    margin-bottom: 1rem;
+  }
+
+  .entry-meta-bottom {
+    margin-top: 2rem;
+    border-top: 1px solid #ebf2f6;
+    padding: 1rem 0;
+  }
+} 
