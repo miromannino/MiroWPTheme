@@ -14,5 +14,4 @@ add_shortcode('button', function ($atts, $content = null) {
         . '</a>';
 });
 
-
 ?>
