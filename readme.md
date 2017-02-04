@@ -1,3 +1,7 @@
+<figure class="figure">
+<img class="figure-img img-fluid rounded" src="http://miromannino.com/wp-content/uploads/miro-wp-theme-main-image.png"/>
+</figure>
+
 Miro is a Minimal, Clean and Responsive WordPress Theme with random animated headers. Theme is customisable with theme options: social buttons to display, twitter tracker, privacy policy link, and other parts of the layout. A set of shortcodes will help you to generate complex portfolios. Realised using Bootstrap 4, it brings all of its power in your blog.
 
 ## Live Demo
