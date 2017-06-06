@@ -1,49 +1,80 @@
 .portfolio {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
 
-  .portfolio-entry {
-    margin-bottom: 2rem;
+  .card-img-top {
+    width: 100%;
+  }
 
-    h3, h3 > a {
+  .card-title {
+    margin-top: 0;
+    a { 
       color: $headings-color;
-      margin-bottom: 1rem;
-      margin-top: 3rem;
 
       &:hover {
         color: $link-color;
       }
     }
+  }
 
-    .portfolio-attrs {
-      margin-bottom: 0.5rem;
-      .figure {
-        margin: 0; 
-        > img { width:100%; }
-      }
-
-      .portfolio-attr {
-        font-size: 0.8rem;
-        border-bottom: 1px solid #ccc;
-        padding: 4px;
-
-        .attr-label {
-          font-weight: bold;
-        }
-
-      }
-
-      .portfolio-links {
-        margin-top: 0.5rem;
-        font-size: 0.8rem;
-      }
+  .card-columns {
+    @include media-breakpoint-down(lg) {
+      column-count: 2;
+    }    
+    @include media-breakpoint-down(sm) {
+      column-count: 1;
     }
-
-    .portfolio-description {
-      margin-bottom: 3rem;
-      p { margin-bottom: 0.5rem; }
+    @include media-breakpoint-only(xl) {
+      column-count: 3;
     }
-
   }
 
 }
+
+// .portfolio {
+//   margin-top: 2rem;
+//   margin-bottom: 2rem;
+
+//   .portfolio-entry {
+//     margin-bottom: 2rem;
+
+//     h3, h3 > a {
+//       color: $headings-color;
+//       margin-bottom: 1rem;
+//       margin-top: 3rem;
+
+//       &:hover {
+//         color: $link-color;
+//       }
+//     }
+
+//     .portfolio-attrs {
+//       margin-bottom: 0.5rem;
+//       .figure {
+//         margin: 0; 
+//         > img { width:100%; }
+//       }
+
+//       .portfolio-attr {
+//         font-size: 0.8rem;
+//         border-bottom: 1px solid #ccc;
+//         padding: 4px;
+
+//         .attr-label {
+//           font-weight: bold;
+//         }
+
+//       }
+
+//       .portfolio-links {
+//         margin-top: 0.5rem;
+//         font-size: 0.8rem;
+//       }
+//     }
+
+//     .portfolio-description {
+//       margin-bottom: 3rem;
+//       p { margin-bottom: 0.5rem; }
+//     }
+
+//   }
+
+// }

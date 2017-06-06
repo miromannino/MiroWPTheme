@@ -2,6 +2,13 @@
 $enable-flex: true;
 $main-sm-columns: 12;
 $sidebar-sm-columns: 4;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 800px,
+  lg: 992px,
+  xl: 1200px
+) !default;
 
 // Colors
 $link-color: #F8775E;
@@ -16,7 +23,6 @@ $font-family-sans-serif: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 $font-size-root: 20px !default;
 $font-size-base: 1rem !default;
 
-// $headings-font-family: 'Merriweather Sans', sans-serif;
 $headings-font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 $headings-color: #404040;
 $headings-font-weight: 400;

@@ -10,7 +10,6 @@ $aside-top-margin: $wrap-top-margin - 0.5rem;
   width: 100%;
   background: #FFFFFF;
   margin-top: $navbar-height;
-  overflow-x: scroll;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 
   .wrap {
@@ -24,9 +23,14 @@ $aside-top-margin: $wrap-top-margin - 0.5rem;
     }
 
     .main {
-      max-width: $max-text-width;
       margin: 0 auto;
+      overflow: auto;
+
+      @include media-breakpoint-up(lg) {
+        max-width: $max-text-width;
+      }
     }
+
   }
 }
 
