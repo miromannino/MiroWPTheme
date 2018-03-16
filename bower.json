@@ -9,6 +9,7 @@
   "dependencies": {
     "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-alpha.5",
     "d3": "^4.3.0",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "bricklayer": "^0.4.3"
   }
 }
