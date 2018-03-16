@@ -7,6 +7,7 @@ body {
   font-weight: 300;
 }
 
+// Formatting -----------------
 a {
   transition: 300ms;
 
@@ -39,6 +40,7 @@ h2, h3, h4, h5, h6 {
     visibility: hidden;
   }
 }
+
 h2.noanchor, h3.noanchor, h4.noanchor, h5.noanchor, h6.noanchor {
   position: initial;
   .anchor {
@@ -48,6 +50,7 @@ h2.noanchor, h3.noanchor, h4.noanchor, h5.noanchor, h6.noanchor {
     display: none;
   }
 }
+
 @include media-breakpoint-down(sm) { // means: @media (max-width: 543px) {
   h2, h3, h4, h5, h6 {
     position: initial;
@@ -60,7 +63,8 @@ h2.noanchor, h3.noanchor, h4.noanchor, h5.noanchor, h6.noanchor {
   }
 }
 
-/* SyntaxHighLighter */
+
+// SyntaxHighLighter ----------
 .syntaxhighlighter {
   max-width: 100%;
   .code code {
@@ -72,7 +76,14 @@ h2.noanchor, h3.noanchor, h4.noanchor, h5.noanchor, h6.noanchor {
   table-layout: fixed;
 }
 
-// Fade in ---------
+
+// Others ---------------------
+.ad {
+  overflow: hidden;
+}
+
+
+// Fade in --------------------
 .fadeIn {
  animation: fadein 1s;
  animation-fill-mode: both;
@@ -93,14 +104,14 @@ h2.noanchor, h3.noanchor, h4.noanchor, h5.noanchor, h6.noanchor {
   to { opacity: 1; }
 }
 
-// Admin bar -------
+// Admin bar-------------------
 #wpadminbar {
   position: fixed;
   bottom: 0;
   top: initial;
 }
 
-// Social links
+// Social links ---------------
 .social-links {
   a { 
     color: #55595c;

@@ -1,8 +1,11 @@
 {
   "dependencies": {
     "main.js": {
+      "bower": ["jquery", "d3", "bricklayer"],
       "files": [
-        "scripts/main.js"
+        "scripts/main.js",
+        "scripts/headers.js",
+        "scripts/portfolio.js"
       ],
       "main": true
     },
@@ -10,21 +13,13 @@
       "files": [
         "styles/main.scss"
       ],
+      "bower": ["bricklayer"],
       "main": true
     },
     "customizer.js": {
       "files": [
         "scripts/customizer.js"
       ]
-    },
-    "jquery.js": {
-      "bower": ["jquery"]
-    },
-    "headers.js": {
-      "files": [
-        "scripts/headers.js"
-      ],
-      "main": true
     }
   },
   "config": {

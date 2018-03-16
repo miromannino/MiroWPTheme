@@ -9,6 +9,8 @@ $fa-font-path:   "../../bower_components/font-awesome/fonts";
 @import "../../bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
 
+@import "../../bower_components/bricklayer/dist/bricklayer.min.css";
+
 @import "common/global";
 @import "common/fonts";
 @import "components/buttons";
