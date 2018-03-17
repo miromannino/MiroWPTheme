@@ -39,5 +39,8 @@ use Roots\Sage\Wrapper;
     echo get_theme_mod('twitter_tag_code');
   }
   ?>
+  <script type="text/javascript">
+    mirowptheme_init_portfolio();
+  </script>
 </body>
 </html>

@@ -18,7 +18,6 @@ $sage_includes = [
   'lib/wrapper.php',     // Theme wrapper class
   'lib/customizer.php',   // Theme customizer
   'lib/sociallinks.php',   // Social links
-  'lib/portfolio.php',   // Social buttons
   'lib/wp-bootstrap-navwalker/wp_bootstrap_navwalker.php', // Navwalker for bootstrap
   'lib/wp-widget-meta/class-wp-widget-meta.php', // Meta widget mod
   'lib/comments.php'

@@ -4,6 +4,10 @@ use Roots\Sage\Setup;
 use Roots\Sage\Wrapper;
 
 ?>
+<!doctype html>
+<html <?php language_attributes(); ?>>
+<?php get_template_part('templates/head'); ?>
+<body <?php body_class(); ?>>
 
   <?php include 'base-header.php'; ?>
 
@@ -28,3 +32,13 @@ use Roots\Sage\Wrapper;
   <footer class="footer">
     <?php include 'base-footer.php' ?>
   </footer>
+  <?php
+  do_action('get_footer');
+  wp_footer();
+  echo the_field('footer_script');
+  if (strlen(get_theme_mod('twitter_tag_code')) > 0) {
+    echo get_theme_mod('twitter_tag_code');
+  }
+  ?>
+</body>
+</html>
