@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Wide page
+ * Template Name: Portfolio page
  */
 ?>
 
