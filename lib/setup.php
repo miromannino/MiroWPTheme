@@ -74,7 +74,6 @@ add_action('widgets_init', function () {
   register_sidebar([
     'name'          => __('Footer', 'sage'),
     'id'            => 'sidebar-footer',
-    'class'         => 'ciao',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<div class="footer-title">',
@@ -94,7 +93,6 @@ add_action('wp_enqueue_scripts', function () {
   }
 
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
-  wp_enqueue_script('miro/headers', Assets\asset_path('scripts/headers.js'), [], null, true);
 }, 100);
 
 
