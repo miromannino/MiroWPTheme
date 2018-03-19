@@ -34,7 +34,6 @@ use Roots\Sage\Wrapper;
   <?php
   do_action('get_footer');
   wp_footer();
-  echo the_field('footer_script');
   if (strlen(get_theme_mod('twitter_tag_code')) > 0) {
     echo get_theme_mod('twitter_tag_code');
   }
