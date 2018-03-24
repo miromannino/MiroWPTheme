@@ -92,6 +92,8 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('comment-reply');
   }
 
+  wp_enqueue_script('jquery');
+
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 }, 100);
 
