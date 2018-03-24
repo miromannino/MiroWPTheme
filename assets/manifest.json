@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "main.js": {
-      "bower": ["d3", "bricklayer"],
+      "bower": ["bootstrap", "d3", "bricklayer"],
       "files": [
         "scripts/main.js",
         "scripts/headers.js",

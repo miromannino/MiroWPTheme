@@ -39,7 +39,7 @@ use Roots\Sage\Wrapper;
   }
   ?>
   <script type="text/javascript">
-    mirowptheme_init_portfolio();
+    mirowptheme_init_portfolio(jQuery);
   </script>
 </body>
 </html>

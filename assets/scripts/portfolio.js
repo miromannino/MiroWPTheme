@@ -1,4 +1,4 @@
-function mirowptheme_init_portfolio() {
+function mirowptheme_init_portfolio($) {
   var bricklayer = new Bricklayer(document.querySelector('.bricklayer'));
   // bricklayer.on('redraw', function (e) {
   $('.portfolio').addClass('visible');
