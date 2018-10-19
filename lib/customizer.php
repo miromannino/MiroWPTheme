@@ -96,6 +96,20 @@ add_action('customize_register', function ($wp_customize) {
     'type' => 'text'
   )));
 
+  $wp_customize->add_section('miro_theme_ganalytics_tracker' , array(
+      'title' => __( 'Google Analytics tracker', 'miro' ),
+      'priority' => 30,
+  ));
+  $wp_customize->add_setting('ganalytics_tag_code' , array(
+    'default' => ''
+  ));
+  $wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'ganalytics_tag_code', array(
+    'label' => __('Google Analytics tracker', 'sage'),
+    'section' => 'miro_theme_ganalytics_tracker',
+    'settings' => 'ganalytics_tag_code',
+    'type' => 'textarea'
+  )));
+
   $wp_customize->add_section('miro_theme_twitter_tracker' , array(
       'title' => __( 'Twitter tracker', 'miro' ),
       'priority' => 30,
