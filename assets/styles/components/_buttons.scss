@@ -7,6 +7,12 @@
   }
 }
 
+.btn-primary {
+    color: #fff;
+    background-color: $link-color;
+    border-color: $link-color;
+}
+
 .btn-secondary {
   color: $link-color;
   background-color: initial;

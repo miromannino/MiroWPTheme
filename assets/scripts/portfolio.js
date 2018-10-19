@@ -6,17 +6,18 @@ function mirowptheme_init_portfolio($) {
   // bricklayer.redraw();
 
   var selectedTag = null;
-  $('.portfolio-filter a').click(function (ev) {
-    var tag = $(ev.target).text().toLowerCase();
-    selectedTag = selectedTag === tag ? null : tag; //toggle select anything
-    $('.portfolio-filter a').each(function (idx, el) {
+  function updateTagsAndCards() {
+    $('.portfolio-filter .tag').each(function (idx, el) {
       var $el = $(el);
-      if ($el.text().toLowerCase() === selectedTag || selectedTag === null) {
+      if ($el.text().toLowerCase() === selectedTag) {
         $el.removeClass('tag-disabled');
       } else {
         $el.addClass('tag-disabled');
       }
     });
+    if (selectedTag === null) {
+      $('.portfolio-filter .tag-all').removeClass('tag-disabled');
+    }
     $('.portfolio .card').each(function (idx, el) {
       var $entry = $(el);
       if (selectedTag === null) {
@@ -35,5 +36,16 @@ function mirowptheme_init_portfolio($) {
     });
     bricklayer.redraw();
     console.log('selected: ', selectedTag);
+  }
+
+  $('.portfolio-filter .tag-all').click(function (ev) {
+    selectedTag = null;
+    updateTagsAndCards();
+  });
+
+  $('.portfolio-filter a:not(.tag-all)').click(function (ev) {
+    var tag = $(ev.target).text().toLowerCase();
+    selectedTag = selectedTag === tag ? null : tag;
+    updateTagsAndCards();
   });
 }

@@ -23,6 +23,6 @@
     }
   },
   "config": {
-    "devUrl": "http://localhost/~miro/miromannino/"
+    "devUrl": "http://localhost/miromannino/"
   }
 }

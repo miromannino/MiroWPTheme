@@ -3,14 +3,10 @@
 @import "common/variables";
 
 $fa-font-path:   "../../bower_components/font-awesome/fonts";
-// Automatically injected Bower dependencies via wiredep (never manually edit this block)
-// bower:scss
-@import "../../bower_components/bootstrap/scss/bootstrap.scss";
+
 @import "../../bower_components/font-awesome/scss/font-awesome.scss";
-// endbower
-
 @import "../../bower_components/tether/dist/css/tether.min.css";
-
+@import "../../bower_components/bootstrap/scss/bootstrap.scss";
 @import "../../bower_components/bricklayer/dist/bricklayer.min.css";
 
 @import "common/global";

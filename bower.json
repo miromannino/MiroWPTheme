@@ -1,8 +1,7 @@
 {
-  "name": "sage",
-  "homepage": "https://roots.io/sage/",
+  "name": "miro-wp-theme",
   "authors": [
-    "Ben Word <ben@benword.com>"
+    "Miro Mannino <miro.mannino@gmail.com>"
   ],
   "license": "MIT",
   "private": true,
@@ -12,5 +11,13 @@
     "font-awesome": "^4.7.0",
     "bricklayer": "^0.4.3",
     "tether": "^1.4.3"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "./scss/bootstrap.scss",
+        "./dist/js/bootstrap.bundle.js"
+      ]
+    }
   }
 }

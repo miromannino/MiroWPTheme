@@ -18,6 +18,10 @@ header > nav.navbar {
     }
   }
 
+  #navbarResponsive {
+    justify-content: flex-end;
+  }
+
   .navbar-brand {
     margin-top: $navbar-brand-margin-y;
     margin-bottom: $navbar-brand-margin-y;
@@ -31,6 +35,7 @@ header > nav.navbar {
     }
 
     > svg {
+      vertical-align: baseline;
       height: $navbar-brand-img-height;
     }
 

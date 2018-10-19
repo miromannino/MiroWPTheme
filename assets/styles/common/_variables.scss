@@ -1,3 +1,7 @@
+html {
+  font-size: 20px;
+}
+
 // Grid settings
 $enable-flex: true;
 $main-sm-columns: 12;
@@ -12,9 +16,10 @@ $grid-breakpoints: (
 
 // Colors
 $link-color: #F8775E;
+$link-color-hover: darken($link-color, 10%);
 $ui-link-color: #999999;
 $ui-link-color-hover: $link-color;
-$ui-link-color-active: darken($ui-link-color, 50%);
+$ui-link-color-active: darken($ui-link-color, 10%);
 $brand-primary: $link-color;
 $borders-color: #EBF2F6;
 
