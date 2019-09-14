@@ -37,6 +37,9 @@ use Roots\Sage\Wrapper;
     }
     do_action('get_footer');
     wp_footer();
+    if (function_exists('get_field') && get_field('footer_script')) {
+      echo the_field('footer_script');
+    }
     if (strlen(get_theme_mod('twitter_tag_code')) > 0) {
       echo get_theme_mod('twitter_tag_code');
     }

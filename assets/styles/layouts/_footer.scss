@@ -46,6 +46,17 @@ $footer-height: 14rem;
         color: #fff;
       }
     }
+
+    .email-section {
+      display: inline-block;
+      color: #fff;
+      font-size: 80%;
+
+      .email-label {
+        font-weight: bold;
+      }
+      
+    }
   }
 
   .copyrights {

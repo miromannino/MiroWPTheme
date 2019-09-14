@@ -26,6 +26,9 @@ function get_social_links($size = 'fa-2x') {
   if (strlen(get_theme_mod('username_youtube')) > 0) {
     $res .= '<a target="_blank" href="https://www.youtube.com/user/' . get_theme_mod('username_youtube') . '" class="fa ' . $size . ' fa-youtube-square"></a>';
   }
+  if (strlen(get_theme_mod('email_address_svg_code')) > 0) {
+    $res .= '<div class="email-section"><div class="email-label">email</div><div class="email-svg">' . get_theme_mod('email_address_svg_code') . '</div></div>';
+  }
   return $res . '</div>';
 }
 
@@ -54,6 +57,9 @@ function get_social_links_list() {
   }
   if (strlen(get_theme_mod('username_youtube')) > 0) {
     $res .= '<li><a target="_blank" href="https://www.youtube.com/user/' . get_theme_mod('username_youtube') . '"><i class="fa fa-youtube-square" aria-hidden="true"></i>&nbsp;YouTube</a></li>';
+  }
+  if (strlen(get_theme_mod('email_address_svg_code')) > 0) {
+    $res .= '<li><div class="email-svg">' . get_theme_mod('email_address_svg_code') . '</div></li>';
   }
   return $res . '</ul>';
 }

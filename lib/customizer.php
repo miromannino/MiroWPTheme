@@ -96,6 +96,16 @@ add_action('customize_register', function ($wp_customize) {
     'type' => 'text'
   )));
 
+  $wp_customize->add_setting('email_address_svg_code' , array(
+    'default' => ''
+  ));
+  $wp_customize->add_control( new \WP_Customize_Control( $wp_customize, 'email_address_svg_code', array(
+    'label' => __('Email svg code', 'sage'),
+    'section' => 'miro_theme_contacts',
+    'settings' => 'email_address_svg_code',
+    'type' => 'textarea'
+  )));
+
   $wp_customize->add_section('miro_theme_ganalytics_tracker' , array(
       'title' => __( 'Google Analytics tracker', 'miro' ),
       'priority' => 30,
