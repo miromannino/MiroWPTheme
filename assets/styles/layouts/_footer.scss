@@ -18,6 +18,9 @@ $footer-height: 14rem;
   }
 
   .container {
+    width: 100%;
+    padding-left: 5rem;
+    padding-right: 5rem;
     max-width: $max-text-width + $page-left-right-padding * 2;
     padding-left: $page-left-right-padding;
     padding-right: $page-left-right-padding;
@@ -47,9 +50,6 @@ $footer-height: 14rem;
 
   .copyrights {
     display: block;
-
-    .proudly-powered {
-    }
 
     .theme-designed {
       margin-right: 1rem;

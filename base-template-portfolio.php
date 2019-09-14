@@ -28,10 +28,8 @@ use Roots\Sage\Wrapper;
     </div><!-- /.wrap -->
   </div><!-- /.content-container-img-header -->
 
-  <footer class="footer footer-wide">
-    <?php include 'base-footer.php' ?>
-  </footer>
   <?php
+  get_template_part('templates/footer-wide');
   do_action('get_footer');
   wp_footer();
   if (strlen(get_theme_mod('twitter_tag_code')) > 0) {

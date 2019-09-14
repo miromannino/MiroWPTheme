@@ -29,16 +29,17 @@ use Roots\Sage\Wrapper;
     </div><!-- /.wrap -->
   </div><!-- /.content-container-img-header -->
 
-  <footer class="footer">
-    <?php include 'base-footer.php' ?>
-  </footer>
   <?php
-  do_action('get_footer');
-  wp_footer();
-  echo the_field('footer_script');
-  if (strlen(get_theme_mod('twitter_tag_code')) > 0) {
-    echo get_theme_mod('twitter_tag_code');
-  }
+    if (Setup\display_sidebar()) {
+      get_template_part('templates/footer-sidebar');
+    } else {
+      get_template_part('templates/footer-normal');
+    }
+    do_action('get_footer');
+    wp_footer();
+    if (strlen(get_theme_mod('twitter_tag_code')) > 0) {
+      echo get_theme_mod('twitter_tag_code');
+    }
   ?>
 </body>
 </html>
