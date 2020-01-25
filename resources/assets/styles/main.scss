@@ -1,7 +1,6 @@
 @import "common/variables";
-
-/** Import everything from autoload */
-@import "./autoload/**/*";
+@import "~bootstrap/scss/bootstrap";
+@import "~font-awesome/scss/font-awesome.scss";
 
 /**
  * Import npm dependencies
@@ -13,13 +12,15 @@
 
 /** Import theme styles */
 @import "common/global";
+@import "common/fonts";
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";
 @import "components/wp-classes";
 @import "layouts/header";
-@import "layouts/sidebar";
 @import "layouts/footer";
 @import "layouts/pages";
+@import "layouts/sidebar";
 @import "layouts/posts";
 @import "layouts/tinymce";
+@import "layouts/portfolio";
