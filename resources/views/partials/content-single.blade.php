@@ -7,7 +7,24 @@
     @php the_content() @endphp
   </div>
   <footer>
-    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
+    @php
+      $cat_list = get_the_category_list(' ');
+      if ($cat_list) { 
+        ?>
+        <div class="categories">
+          <?php echo $cat_list; ?>
+        </div>
+        <?php 
+      } 
+    @endphp
+    <div class="post-date">
+      <time class="entry-date" datetime="<?php echo get_the_date( 'c' ); ?>" pubdate>
+        <span class="month"><?php echo get_the_date('M'); ?></span>
+        <span class="day"><?php echo get_the_date('d'); ?></span>
+        <span class="year"><?php echo get_the_date('Y'); ?></span>
+      </time>
+    </div>
+    <!-- {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!} -->
   </footer>
   @php comments_template('/partials/comments.blade.php') @endphp
 </article>

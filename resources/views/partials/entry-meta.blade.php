@@ -1,6 +1,10 @@
-<time class="updated" datetime="{{ get_post_time('c', true) }}">{{ get_the_date() }}</time>
-<p class="byline author vcard">
-  {{ __('By', 'sage') }} <a href="{{ get_author_posts_url(get_the_author_meta('ID')) }}" rel="author" class="fn">
-    {{ get_the_author() }}
-  </a>
-</p>
+<header class="entry-meta">
+  @php
+    if (has_post_thumbnail()) {
+      $large_image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'post-thumbnail');
+  @endphp
+  <img class="wp-post-image rounded" src="<?php echo $large_image_url[0] ?>" />
+  @php
+    } 
+  @endphp
+</header>
