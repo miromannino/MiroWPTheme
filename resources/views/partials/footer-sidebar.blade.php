@@ -1,3 +1,3 @@
 <footer class="footer footer-sidebar">
-  @include('footer-base')
+  @include('partials.footer-base')
 </footer>
