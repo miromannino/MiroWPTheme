@@ -8,7 +8,8 @@
       "./scripts/customizer.js"
     ]
   },
-  "devUrl": "http://localhost/~miro/miromannino",
+  "publicPath": "/wp-content/themes/MiroWPTheme",
+  "devUrl": "http://miromannino.local",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
