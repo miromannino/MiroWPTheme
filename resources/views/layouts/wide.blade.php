@@ -12,25 +12,16 @@
     <div class="header-img-container-white-filler">&nbsp;</div>
     
     <div class="content-container content-container-img-header">
-      <div class="wrap container" role="document">
+      <div class="wrap container container-wide fadeIn" role="document">
         <div class="content row">
           <main class="main fadeIn fadeInD1">
             @yield('content')
           </main>
-          @if (App\display_sidebar())
-            <aside class="sidebar fadeIn">
-              @include('partials.sidebar')
-            </aside>
-          @endif
         </div>
       </div>
     </div>
 
-    @if (App\display_sidebar())
-      @include('partials.footer-sidebar')
-    @else
-      @include('partials.footer')
-    @endif
+    @include('partials.footer-wide')
     @php do_action('get_footer') @endphp
     @php wp_footer() @endphp
     
@@ -41,6 +32,8 @@
     @if (strlen(get_theme_mod('twitter_tag_code')) > 0)
       {{!! get_theme_mod('twitter_tag_code') !!}}
     @endif
+
+    @yield('additional-scripts')
 
   </body>
 </html>

@@ -1,8 +1,8 @@
 {{--
-  Template Name: Custom Template
+  Template Name: Wide Page
 --}}
 
-@extends('layouts.app')
+@extends('layouts.wide')
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
