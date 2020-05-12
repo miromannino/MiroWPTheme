@@ -1,5 +1,9 @@
 @import "common/variables";
 @import "~bootstrap/scss/bootstrap";
+@import "~font-awesome/scss/_variables.scss";
+
+$fa-font-path: "~font-awesome/fonts";
+
 @import "~font-awesome/scss/font-awesome.scss";
 
 /**

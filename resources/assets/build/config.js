@@ -27,6 +27,7 @@ const config = merge({
     cacheBusting: isProduction,
     watcher: !!argv.watch,
   },
+  publicPath: isProduction ? '/wp-content/themes/MiroWPTheme/' : '/~miro/miromannino/wp-content/themes/MiroWPTheme',
   watch: [],
 }, userConfig);
 
