@@ -67,10 +67,6 @@ $portfolio-large: 1200px;
       }
     }
 
-    ul {
-      padding-inline-start: 30px;
-    }
-
     .card-block {
       margin: 0.75rem;
     }
@@ -78,15 +74,30 @@ $portfolio-large: 1200px;
     .card-text {
       margin-bottom: 0.5rem;
       font-size: 0.9rem;
+
+      ul {
+        list-style-type: "- ";
+        padding-left: 1rem;
+      }
     }
 
-    .project-year {
-      font-size: 75%;
-      margin-top: 0.25rem;
-      display: inline-block;
-      float: right;
-      color: gray;
+    .card-bottom {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: flex-end;
+
+      .card-link {
+        font-size: 75%;
+      }
+
+      .project-year {
+        font-size: 75%;
+        color: gray;
+        margin-left: auto;
+      }
+
     }
+
   }
 
   .card-hide {
