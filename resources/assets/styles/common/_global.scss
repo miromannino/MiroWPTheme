@@ -1,49 +1,49 @@
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    color: #505050;
-    font-weight: 300;
+  color: #505050;
+  font-weight: 300;
 }
 
 // Formatting -----------------
 a {
-    transition: 300ms;
+  transition: 300ms;
 
-    &:hover,
-    &:active,
-    &:visited,
-    &:focus {
-        text-decoration: none;
-        outline: none;
-    }
+  &:hover,
+  &:active,
+  &:visited,
+  &:focus {
+    text-decoration: none;
+    outline: none;
+  }
 }
 
 h2 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 h3 {
-    margin-top: 1.8rem;
-    margin-bottom: 1rem;
+  margin-top: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 h4 {
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 h5 {
-    margin-top: 1.2rem;
-    margin-bottom: 1rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 h6 {
-    margin-top: 1.2rem;
-    margin-bottom: 1rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 h2,
@@ -51,23 +51,23 @@ h3,
 h4,
 h5,
 h6 {
-    position: relative;
+  position: relative;
 
-    .anchor {
-        color: #eee;
-        position: absolute;
-        left: -1.5rem;
+  .anchor {
+    color: #eee;
+    position: absolute;
+    left: -1.5rem;
 
-        &:hover {
-            color: $link-color-hover;
-        }
+    &:hover {
+      color: $link-color-hover;
     }
+  }
 
-    .placeholder {
-        position: absolute;
-        top: -6rem;
-        visibility: hidden;
-    }
+  .placeholder {
+    position: absolute;
+    top: -6rem;
+    visibility: hidden;
+  }
 }
 
 h2.noanchor,
@@ -75,120 +75,120 @@ h3.noanchor,
 h4.noanchor,
 h5.noanchor,
 h6.noanchor {
-    position: initial;
+  position: initial;
 
-    .anchor {
-        display: none;
-    }
+  .anchor {
+    display: none;
+  }
 
-    .placeholder {
-        display: none;
-    }
+  .placeholder {
+    display: none;
+  }
 }
 
 @include media-breakpoint-down(sm) {
-    // means: @media (max-width: 543px) {
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        position: initial;
+  // means: @media (max-width: 543px) {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    position: initial;
 
-        .anchor {
-            display: none;
-        }
-
-        .placeholder {
-            display: none;
-        }
+    .anchor {
+      display: none;
     }
+
+    .placeholder {
+      display: none;
+    }
+  }
 }
 
 // SyntaxHighLighter ----------
 .syntaxhighlighter {
-    max-width: 100%;
+  max-width: 100%;
 
-    .code code {
-        font-size: 0.8rem !important;
-        line-height: 1.5em !important;
-    }
+  .code code {
+    font-size: 0.8rem !important;
+    line-height: 1.5em !important;
+  }
 }
 
 .syntaxhighlighter table {
-    table-layout: fixed;
+  table-layout: fixed;
 }
 
 // Others ---------------------
 .ad {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 // Fade in --------------------
 .fadeIn {
-    // animation: fadein 1s;
-    // animation-fill-mode: both;
-    // -webkit-backface-visibility: visible;
-    // -webkit-transform: translate3d(0, 0, 0);
+  // animation: fadein 1s;
+  // animation-fill-mode: both;
+  // -webkit-backface-visibility: visible;
+  // -webkit-transform: translate3d(0, 0, 0);
 }
 
 .fadeInD1 {
-    animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .fadeInD2 {
-    animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 
 .fadeInD3 {
-    animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 
 @keyframes fadein {
-    from {
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
 
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
 // Admin bar-------------------
 #wpadminbar {
-    position: fixed;
-    bottom: 0;
-    top: initial;
+  position: fixed;
+  bottom: 0;
+  top: initial;
 }
 
 // Social links ---------------
 .social-links {
-    a {
-        color: #55595c;
-        font-size: 1.8rem;
-        margin-right: 1rem;
-    }
+  a {
+    color: #55595c;
+    font-size: 1.8rem;
+    margin-right: 1rem;
+  }
 }
 
 ul.social-links-list {
-    list-style-type: none;
-    padding-left: 0;
+  list-style-type: none;
+  padding-left: 0;
 
-    li {
-        margin-bottom: 0.5rem;
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    font-size: 1.1rem;
+    color: #55595c;
+    margin-right: 1rem;
+
+    @include media-breakpoint-down(xs) {
+      font-size: 1rem;
     }
 
-    a {
-        font-size: 1.1rem;
-        color: #55595c;
-        margin-right: 1rem;
-
-        @include media-breakpoint-down(xs) {
-            font-size: 1rem;
-        }
-
-        &:hover {
-            color: $link-color;
-        }
+    &:hover {
+      color: $link-color;
     }
+  }
 }

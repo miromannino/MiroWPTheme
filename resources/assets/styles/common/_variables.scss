@@ -1,34 +1,6 @@
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
 
-html {
-    font-size: 20px;
-}
-
-// Grid settings
-$enable-flex: true;
-$main-sm-columns: 12;
-$sidebar-sm-columns: 4;
-$grid-breakpoints: (
-    xs: 0,
-    sm: 576px,
-    md: 800px,
-    lg: 992px,
-    xl: 1200px,
-) !default;
-
-// Colors
-$theme-colors: (
-    primary: #525ddc,
-);
-$link-color: #f8775e;
-$link-color-hover: darken($link-color, 10%);
-$ui-link-color: #999;
-$ui-link-color-hover: $link-color;
-$ui-link-color-active: darken($ui-link-color, 10%);
-$brand-primary: $link-color;
-$borders-color: #ebf2f6;
-
 // Fonts
 $font-family-sans-serif: "Open Sans", "Helvetica Neue", Arial, sans-serif;
 $font-size-root: 20px !default;
@@ -43,6 +15,34 @@ $font-size-h3: 1.25rem !default;
 $font-size-h4: 1.1rem !default;
 $font-size-h5: 1rem !default;
 $font-size-h6: 1rem !default;
+
+html {
+  font-size: 20px;
+}
+
+// Grid settings
+$enable-flex: true;
+$main-sm-columns: 12;
+$sidebar-sm-columns: 4;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 800px,
+  lg: 992px,
+  xl: 1200px,
+) !default;
+
+// Colors
+$theme-colors: (
+  primary: #525ddc,
+);
+$link-color: #f8775e;
+$link-color-hover: darken($link-color, 10%);
+$ui-link-color: #999;
+$ui-link-color-hover: $link-color;
+$ui-link-color-active: darken($ui-link-color, 10%);
+$brand-primary: $link-color;
+$borders-color: #ebf2f6;
 
 // Navbar
 $navbar-dark-toggler-icon-bg: none;
