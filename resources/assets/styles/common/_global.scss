@@ -126,10 +126,10 @@ h6.noanchor {
 
 // Fade in --------------------
 .fadeIn {
-  // animation: fadein 1s;
-  // animation-fill-mode: both;
-  // -webkit-backface-visibility: visible;
-  // -webkit-transform: translate3d(0, 0, 0);
+  animation: fadein 1s;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: visible;
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .fadeInD1 {
