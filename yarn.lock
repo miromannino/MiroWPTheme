@@ -912,6 +912,11 @@ braces@^2.3.1, braces@^2.3.2:
     split-string "^3.0.2"
     to-regex "^3.0.1"
 
+bricklayer@^0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/bricklayer/-/bricklayer-0.4.3.tgz#ee8fff745d023eed53d56cb6e8602f9921d5096b"
+  integrity sha1-7o//dF0CPu1T1Wy26GAvmSHVCWs=
+
 brorand@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/brorand/-/brorand-1.1.0.tgz#12c25efe40a45e3c323eb8675a0a0ce57b22371f"
