@@ -1,3 +1,4 @@
+/* Error 404 page */
 @extends('layouts.normal')
 
 @section('content')

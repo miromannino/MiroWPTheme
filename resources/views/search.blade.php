@@ -1,3 +1,4 @@
+/* Search results page */
 @extends('layouts.normal')
 
 @section('content')

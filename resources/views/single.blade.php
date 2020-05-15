@@ -1,3 +1,4 @@
+/* Single post page */
 @extends('layouts.normal')
 
 @section('content')

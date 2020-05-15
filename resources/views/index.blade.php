@@ -1,3 +1,4 @@
+/* Archive page (used by blog page, category archives, author archives and more) */
 @extends('layouts.normal')
 
 @section('content')
