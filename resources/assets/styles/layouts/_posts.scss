@@ -54,7 +54,6 @@ article {
     font-family: $headings-font-family;
     font-size: 0.8rem;
     color: $ui-link-color;
-    margin-top: 0.5rem;
   }
 
   figure.figure {
@@ -99,8 +98,8 @@ article {
   }
 
   .entry-meta-bottom {
-    margin-top: 2rem;
     border-top: 1px solid #ebf2f6;
     padding: 1rem 0;
+    margin-top: 2rem;
   }
 }
