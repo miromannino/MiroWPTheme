@@ -124,6 +124,13 @@ h6.noanchor {
   overflow: hidden;
 }
 
+figure.figure {
+  display: block;
+  img {
+    max-width: 100%;
+  }
+}
+
 // Fade in --------------------
 .fadeIn {
   animation: fadein 1s;
