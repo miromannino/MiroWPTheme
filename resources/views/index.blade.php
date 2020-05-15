@@ -1,4 +1,4 @@
-/* Archive page (used by blog page, category archives, author archives and more) */
+@php /* Archive page (used by blog page, category archives, author archives and more) */ @endphp
 @extends('layouts.normal')
 
 @section('content')

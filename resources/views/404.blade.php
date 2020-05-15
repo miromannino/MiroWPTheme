@@ -1,4 +1,4 @@
-/* Error 404 page */
+@php /* Error 404 page */ @endphp
 @extends('layouts.normal')
 
 @section('content')

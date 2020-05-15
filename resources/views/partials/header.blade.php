@@ -1,5 +1,5 @@
 <header class="banner" role="banner">
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" role="navigation">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-faded" role="navigation">
 
         <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
             <svg id="svg-miromannino" viewBox="0 0 221 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">

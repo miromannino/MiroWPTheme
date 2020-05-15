@@ -1,4 +1,4 @@
-/* Search results page */
+@php /* Search results page */ @endphp
 @extends('layouts.normal')
 
 @section('content')

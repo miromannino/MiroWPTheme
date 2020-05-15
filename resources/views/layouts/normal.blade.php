@@ -14,7 +14,7 @@
     <div class="content-container content-container-img-header">
       <div class="wrap container fadeIn" role="document">
         <div class="content row">
-          <main class="main fadeIn fadeInD1">
+          <main class="main">
             @yield('content')
           </main>
           @if (App\display_sidebar())

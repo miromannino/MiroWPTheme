@@ -1,4 +1,4 @@
-/* Single post page */
+@php /* Single post page */ @endphp
 @extends('layouts.normal')
 
 @section('content')
