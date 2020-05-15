@@ -1,13 +1,7 @@
 <article @php post_class() @endphp>
   <header>
-    <h1 class="entry-title">{!! get_the_title() !!}</h1>
-    @include('partials/entry-meta')
-  </header>
-  <div class="entry-content">
-    @php the_content() @endphp
-  </div>
-  <footer>
-    @php
+    <div class="entry-meta-top">
+      @php 
       $cat_list = get_the_category_list(' ');
       if ($cat_list) { 
         ?>
@@ -16,7 +10,15 @@
         </div>
         <?php 
       } 
-    @endphp
+      @endphp
+    </div>
+    <h1 class="entry-title">{!! get_the_title() !!}</h1>
+    @include('partials/entry-meta')
+  </header>
+  <div class="entry-content">
+    @php the_content() @endphp
+  </div>
+  <footer class="entry-meta-bottom">
     <div class="post-date">
       <time class="entry-date" datetime="<?php echo get_the_date( 'c' ); ?>" pubdate>
         <span class="month"><?php echo get_the_date('M'); ?></span>
