@@ -7,6 +7,7 @@ $portfolio-large: 1200px;
   transition: opacity 0.25s ease-in-out;
   margin-left: -0.5em;
   margin-right: -0.5em;
+  padding-bottom: 0.5rem;
 
   &.visible {
     opacity: 1;
@@ -22,15 +23,15 @@ $portfolio-large: 1200px;
       width: 100%;
     }
 
-    @media screen and (min-width: 750px) {
+    @media screen and (min-width: 900px) {
       width: 50%;
     }
 
-    @media screen and (min-width: 1180px) {
+    @media screen and (min-width: 1400px) {
       width: 33.333%;
     }
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 2000px) {
       width: 25%;
     }
   }
@@ -39,11 +40,9 @@ $portfolio-large: 1200px;
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
-    opacity: 1;
     visibility: visible;
-    // transition-duration: 200ms, 200ms;
-    // transition-property: visibility, opacity;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    box-shadow: 0 0 10px rgba(139, 96, 96, 0.15);
     border: 1px solid rgba(0, 0, 0, 0.12);
 
     @include media-breakpoint-down(sm) {
@@ -53,6 +52,8 @@ $portfolio-large: 1200px;
     .portfolio-card-img {
       width: 100%;
       border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+      border-top-left-radius: calc(0.25rem - 1px);
+      border-top-right-radius: calc(0.25rem - 1px);
     }
 
     .card-title {
@@ -133,6 +134,7 @@ $portfolio-large: 1200px;
     padding: 0.5em 1em;
     font-weight: 300;
     font-size: 0.7rem;
+    border-radius: 0.25em;
     background-color: $tag-bg-color;
     color: $tag-color;
     text-align: center;

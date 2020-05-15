@@ -8,11 +8,11 @@ export default {
   finalize() {
     $(document).ready(function () {
       var bricklayer = new Bricklayer(document.querySelector('.bricklayer'));
+      var selectedTag = null;
 
       $('.portfolio').addClass('visible');
-  
-      var selectedTag = null;
-      function updateTagsAndCards() {
+
+      function updateTags() {
         $('.portfolio-filter .tag').each(function (idx, el) {
           var $el = $(el);
           if ($el.text().toLowerCase() === selectedTag) {
@@ -21,10 +21,14 @@ export default {
             $el.addClass('tag-disabled');
           }
         });
+
         if (selectedTag === null) {
           $('.portfolio-filter .tag-all').removeClass('tag-disabled');
         }
-        $('.portfolio .card').each(function (idx, el) {
+      }
+
+      function updateCards(cb) {
+        $('.portfolio .portfolio-card').each(function (idx, el) {
           var $entry = $(el);
           if (selectedTag === null) {
             $entry.removeClass('card-hide');
@@ -39,12 +43,22 @@ export default {
               $entry.addClass('card-hide');
             }
           }
-        });
-        bricklayer.redraw();
-        console.log('selected: ', selectedTag);
+        }).promise().done(cb);
+      }
+  
+      function updateTagsAndCards() {
+        updateTags();
+        $('.portfolio').removeClass('visible');
+        setTimeout(function () {
+          updateCards(function () {
+            bricklayer.redraw();
+            $('.portfolio').addClass('visible');
+          });
+        }, 250);
       }
   
       $('.portfolio-filter .tag-all').click(function () {
+        if (selectedTag == null) return;
         selectedTag = null;
         updateTagsAndCards();
       });
