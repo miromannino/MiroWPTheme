@@ -105,18 +105,15 @@ h6.noanchor {
   }
 }
 
-// SyntaxHighLighter ----------
-.syntaxhighlighter {
-  max-width: 100%;
+// Code blocks
+.enlighter-default {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 
-  .code code {
-    font-size: 0.8rem !important;
-    line-height: 1.5em !important;
+  > .enlighter {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
-}
-
-.syntaxhighlighter table {
-  table-layout: fixed;
 }
 
 // Others ---------------------
