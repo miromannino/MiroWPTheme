@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 
-
 // import external dependencies
 import 'jquery';
 import 'bootstrap';
@@ -22,4 +21,7 @@ const routes = new Router({
 
 
 // Load Events
-jQuery(document).ready(() => routes.loadEvents());
+jQuery(document).ready(function () {
+  routes.loadEvents()
+});
+

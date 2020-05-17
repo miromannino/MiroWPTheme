@@ -8,7 +8,7 @@
     @php do_action('get_header') @endphp
     @include('partials.header')
 
-    <div class="header-img-container"><svg id="graph"/></div>
+    <div class="header-img-container"><svg id="animated-header"/></div>
     <div class="header-img-container-white-filler">&nbsp;</div>
     
     <div class="content-container content-container-img-header">
