@@ -2,7 +2,7 @@ Miro is a Minimal, Clean and Responsive WordPress Theme which adapts itself auto
 
 # Screenshot
 
-![alt tag](https://raw.github.com/miromannino/MiroWPTheme/master/screenshot.png)
+![alt tag](https://raw.githubusercontent.com/miromannino/MiroWPTheme/v1.0/screenshot.png)
 
 # Live Demo
 
