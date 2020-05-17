@@ -1,4 +1,4 @@
-![screenshot](https://github.com/miromannino/MiroWPTheme/blob/resources/miro-wp-theme-project-image.png)
+![screenshot](https://raw.githubusercontent.com/miromannino/MiroWPTheme/resources-v2.0/miro-wp-theme-project-image.png)
 
 Miro is a Minimal, Clean and Responsive WordPress Theme with random animated headers. Theme is customisable with theme options: social buttons to display, twitter tracker, privacy policy link, and other parts of the layout. A set of shortcodes will help you to generate complex portfolios. Realised using Bootstrap 4, it brings all of its power in your blog.
 
@@ -12,7 +12,7 @@ Miro is a Minimal, Clean and Responsive WordPress Theme with random animated hea
 
 From the Theme options, you can configure the social buttons: Twitter, GitHub, LinkedIn, Wordpress, PayPal donation, Instagram, Flickr, YouTube. You can decide to display them in the footer as in the following image.
 
-![screenshot](https://github.com/miromannino/MiroWPTheme/blob/resources/footer-screenshot.png)
+![screenshot](https://raw.githubusercontent.com/miromannino/MiroWPTheme/resources-v2.0/footer-screenshot.png)
 
 The social buttons can be also displayed anywhere using the shortcode <code>[social-links]</code> as a series of icons, or using the shortcode <code>[social-links-list]</code> to show as a list of links.
 
@@ -33,9 +33,9 @@ For example:
 
 You can build a portfolio like the following one:
 
-![screenshot](https://github.com/miromannino/MiroWPTheme/blob/resources/portfolio-screenshot.png)
+![screenshot](https://raw.githubusercontent.com/miromannino/MiroWPTheme/resources-v2.0/portfolio-screenshot.png)
 
-In order to make a similar one, follow the example in [portfolio_test.html](https://github.com/miromannino/MiroWPTheme/blob/master/assets/scripts/portfolio_test.html)
+In order to make a similar one, follow the example in `portfolio_test.html`
 
 
 ## Title links
