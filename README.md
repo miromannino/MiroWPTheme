@@ -1,7 +1,48 @@
+![screenshot](https://github.com/miromannino/MiroWPTheme/blob/resources/miro-wp-theme-project-image.png)
+
+Miro is a Minimal, Clean and Responsive WordPress Theme with random animated headers. Theme is customisable with theme options: social buttons to display, twitter tracker, privacy policy link, and other parts of the layout. A set of shortcodes will help you to generate complex portfolios. Realised using Bootstrap 4, it brings all of its power in your blog.
 
 
 
-## Requirements
+## Live Demo
+
+[miromannino.com](http://miromannino.com)
+
+
+
+
+## Features
+
+### Social Buttons 
+
+From the Theme options, you can configure the social buttons: Twitter, GitHub, LinkedIn, Wordpress, PayPal donation, Instagram, Flickr, YouTube. You can decide to display them in the footer as in the following image.
+
+![screenshot](https://github.com/miromannino/MiroWPTheme/blob/resources/footer-screenshot.png)
+
+The social buttons can be also displayed anywhere using the shortcode <code>[social-links]</code> as a series of icons, or using the shortcode <code>[social-links-list]</code> to show as a list of links.
+
+
+### Portfolio
+
+You can build a portfolio like the following one:
+
+![screenshot](https://github.com/miromannino/MiroWPTheme/blob/resources/portfolio-screenshot.png)
+
+In order to make a similar one, follow the example in [portfolio_test.html](https://github.com/miromannino/MiroWPTheme/blob/master/assets/scripts/portfolio_test.html)
+
+
+### Title links
+
+Each title is modified to add a hash character, that let sections of a post to be easily referenced.
+
+
+
+## Theme development
+
+The theme is based on Sage, a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and Bootstrap Sass.
+
+
+### Requirements
 
 Make sure all dependencies have been installed before moving on:
 
@@ -11,7 +52,7 @@ Make sure all dependencies have been installed before moving on:
 * [Node.js](http://nodejs.org/) >= 8.0.0
 * [Yarn](https://yarnpkg.com/en/docs/install)
 
-## Theme structure
+### Theme structure
 
 ```shell
 themes/your-theme-name/   # → Root of your Sage based theme
@@ -44,16 +85,14 @@ themes/your-theme-name/   # → Root of your Sage based theme
 └── vendor/               # → Composer packages (never edit)
 ```
 
-## Theme setup
+### Theme setup
 
 Edit `app/setup.php` to enable or disable theme features, setup navigation menus, post thumbnail sizes, and sidebars.
-
-## Theme development
 
 * Run `yarn` from the theme directory to install dependencies
 * Update `resources/assets/config.json` settings:
   * `devUrl` should reflect your local development hostname
-  * `publicPath` should reflect your WordPress folder structure (`/wp-content/themes/sage` for non-[Bedrock](https://roots.io/bedrock/) installs)
+  * `publicPath` should reflect your WordPress folder structure (e.g. `/wp-content/themes/sage`)
 
 ### Build commands
 
