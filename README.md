@@ -87,8 +87,7 @@ themes/your-theme-name/   # → Root of your Sage based theme
 
 ### Theme setup
 
-Edit `app/setup.php` to enable or disable theme features, setup navigation menus, post thumbnail sizes, and sidebars.
-
+* Run `composer install` from the theme directory to install PHP dependencies
 * Run `yarn` from the theme directory to install dependencies
 * Update `resources/assets/config.json` settings:
   * `devUrl` should reflect your local development hostname
