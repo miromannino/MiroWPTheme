@@ -9,7 +9,7 @@
     @include('partials.header')
 
     <div class="header-img-container"><svg id="animated-header"/></div>
-    <div class="header-img-container-white-filler">&nbsp;</div>
+    <div class="header-img-container-filler">&nbsp;</div>
     
     <div class="content-container content-container-img-header">
       <div class="wrap container container-wide fadeIn" role="document">
