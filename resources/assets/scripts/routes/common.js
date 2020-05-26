@@ -1,5 +1,4 @@
 import * as d3 from 'd3';
-import MiroD3AnimatedHeader from 'miro-d3-animated-headers';
 
 export default {
   init() {
@@ -35,10 +34,6 @@ export default {
         navbar.removeClass('scrolled-header');
       }
     });
-
-    // Animated header
-    var md3ah = new MiroD3AnimatedHeader(document.getElementById('animated-header'), 1000, 150);
-    md3ah.triangleAnimation();
 
   },
   finalize() {

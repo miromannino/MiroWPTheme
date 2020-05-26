@@ -1,5 +1,5 @@
 {
-  "name": "MiroWPTheme",
+  "name": "MiroWPTheme-Photography",
   "version": "3.0.0",
   "author": "Miro Mannino <miro.mannino@gmail.com>",
   "homepage": "https://miromannino.com/",
@@ -64,11 +64,9 @@
   },
   "dependencies": {
     "bootstrap": "v4.3.1",
-    "bricklayer": "^0.4.3",
     "d3": "^5.16.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
-    "miro-d3-animated-headers": "https://github.com/miromannino/Miro-D3-Animated-Headers",
     "popper.js": "^1.14.7"
   }
 }
