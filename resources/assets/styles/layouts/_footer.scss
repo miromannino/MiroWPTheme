@@ -3,18 +3,12 @@ $footer-height: 14rem;
 .footer {
   font-size: 80%;
   width: 100%;
-  color: #fff;
-  background-color: $brand-primary;
-  border-top: 2rem solid #de5b41;
+  background-color: #ececec;
   padding-top: 1rem;
   height: $footer-height;
 
   @include media-breakpoint-down(xs) {
     font-size: 60%;
-  }
-
-  a {
-    color: #fff;
   }
 
   .container {
@@ -25,16 +19,10 @@ $footer-height: 14rem;
     margin: 0 auto;
   }
 
-  .footer-title {
-    color: #fff;
-    margin-bottom: 0.5rem;
-  }
-
   .social-links {
     padding-bottom: 0.7rem;
 
     a {
-      color: #fff;
       font-size: 1.8rem;
       margin-right: 1rem;
 
@@ -43,13 +31,12 @@ $footer-height: 14rem;
         margin-right: 0.8rem;
       }
       &:hover {
-        color: #fff;
+        color: #000;
       }
     }
 
     .email-section {
       display: inline-block;
-      color: #fff;
       font-size: 80%;
 
       .email-label {

@@ -138,6 +138,8 @@ add_filter('sage/display_sidebar', function ($display) {
 
   isset($display) || $display = !in_array(true, [
     // The sidebar will NOT be displayed if ANY of the following return true.
+    is_front_page(),
+    is_home(),
     is_page(),
     is_single(),
     is_404(),
