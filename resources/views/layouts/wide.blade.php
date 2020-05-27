@@ -8,10 +8,11 @@
     @php do_action('get_header') @endphp
     @include('partials.header')
 
-    <div class="header-img-container"><svg id="animated-header"/></div>
-    <div class="header-img-container-filler">&nbsp;</div>
+    <div class="header-img-container">
+			<?php the_custom_header_markup(); ?>
+    </div>
     
-    <div class="content-container content-container-img-header">
+    <div class="content-container">
       <div class="wrap container container-wide fadeIn" role="document">
         <div class="content row">
           <main class="main fadeIn fadeInD1">

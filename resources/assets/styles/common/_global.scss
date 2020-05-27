@@ -11,6 +11,7 @@ body {
 // Formatting -----------------
 a {
   transition: 300ms;
+  font-weight: 400;
 
   &:hover,
   &:active,
@@ -52,22 +53,7 @@ h4,
 h5,
 h6 {
   position: relative;
-
-  .anchor {
-    color: #eee;
-    position: absolute;
-    left: -1.5rem;
-
-    &:hover {
-      color: $link-color-hover;
-    }
-  }
-
-  .placeholder {
-    position: absolute;
-    top: -6rem;
-    visibility: hidden;
-  }
+  font-weight: 300;
 }
 
 h2.noanchor,

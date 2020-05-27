@@ -11,9 +11,8 @@
     <div class="header-img-container">
 			<?php the_custom_header_markup(); ?>
     </div>
-    <div class="header-img-container-filler">&nbsp;</div>
     
-    <div class="content-container content-container-img-header">
+    <div class="content-container">
       <div class="wrap container fadeIn" role="document">
         <div class="content row">
           <main class="main">

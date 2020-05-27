@@ -10,8 +10,6 @@ $aside-top-margin: $wrap-top-margin - 0.5rem;
 
   width: 100%;
   background: #fff;
-  margin-top: $navbar-height;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
 
   .wrap {
     padding: $wrap-top-margin $page-left-right-padding;
@@ -50,10 +48,6 @@ $aside-top-margin: $wrap-top-margin - 0.5rem;
       padding-right: 1rem;
     }
   }
-}
-
-.content-container-img-header {
-  margin-top: $header-img + $navbar-height;
 }
 
 .page h1 {
