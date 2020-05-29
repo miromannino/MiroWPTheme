@@ -9,7 +9,18 @@
     @include('partials.header')
 
     <div class="header-img-container">
-			<?php the_custom_header_markup(); ?>
+      @php
+        if (has_post_thumbnail() && (is_single() || is_page())) {
+          $large_image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'post-thumbnail');
+      @endphp
+      <img class="wp-post-image" src="<?php echo $large_image_url[0] ?>" />
+      @php
+        } else {
+      @endphp
+      <?php the_custom_header_markup(); ?>
+      @php
+        }
+      @endphp
     </div>
     
     <div class="content-container">
