@@ -91,11 +91,10 @@ $footer-height: 14rem;
     max-width: none;
   }
 
-  @include media-breakpoint-down(sm) {
-    // means: @media (max-width: 543px) {
+  @include media-breakpoint-down(md) {
     .container {
-      padding-left: 2rem;
-      padding-right: 2rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
   }
 }
