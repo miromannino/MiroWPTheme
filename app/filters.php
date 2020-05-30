@@ -99,7 +99,7 @@ add_action('after_setup_theme', function () {
 			array(
 				'default-image'    => get_parent_theme_file_uri('/assets/images/header.jpg'),
 				'width'            => 2000,
-				'height'           => 1200,
+				'height'           => 1333,
 				'flex-height'      => true                
 			)
 		)
