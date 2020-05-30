@@ -10,11 +10,13 @@ $aside-top-margin: $wrap-top-margin - 0.5rem;
 
   width: 100%;
   background: #fff;
+  padding: 0 $page-left-right-padding;
 
-  .wrap {
-    padding: $wrap-top-margin $page-left-right-padding;
+  .container {
+    padding: $wrap-top-margin 0;
     margin: 0 auto;
     background: white;
+    max-width: none !important;
 
     .content {
       margin-left: 0;
@@ -22,30 +24,45 @@ $aside-top-margin: $wrap-top-margin - 0.5rem;
     }
 
     .main {
+      max-width: $max-text-width;
       margin: 0 auto;
       overflow: auto;
+    }
+  }
 
-      @include media-breakpoint-up(lg) {
-        max-width: $max-text-width;
+  &.content-container-wide {
+    .container {
+      width: 100%;
+      max-width: 100%;
+      .main {
+        padding-left: 4rem;
+        padding-right: 4rem;
+        max-width: none;
+      }
+
+      @include media-breakpoint-down(md) {
+        // means: @media (max-width: 543px) {
+        .main {
+          padding-left: 0;
+          padding-right: 0;
+        }
       }
     }
   }
-}
 
-.container.container-wide {
-  width: 100%;
-  max-width: 100%;
-  .main {
-    padding-left: 4rem;
-    padding-right: 4rem;
-    max-width: none;
-  }
-
-  @include media-breakpoint-down(md) {
-    // means: @media (max-width: 543px) {
-    .main {
-      padding-left: 1rem;
-      padding-right: 1rem;
+  &.content-container-full {
+    padding: 0;
+    
+    .container {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      max-width: 100%;
+      .main {
+        padding: 0;
+        margin: 0;
+        max-width: none;
+      }
     }
   }
 }

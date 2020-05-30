@@ -12,6 +12,8 @@ module.exports = {
     'block-opening-brace-newline-after': null,
     'no-descending-specificity': null,
     'no-missing-end-of-source-newline': null,
+    'at-rule-empty-line-before': null,
+    'no-eol-whitespace': null,
     'at-rule-no-unknown': [
       true,
       {
