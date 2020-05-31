@@ -1,3 +1,5 @@
 <footer class="footer footer-wide">
-  @include('partials.footer-base')
+  <div class="container">
+    @include('partials.footer-base')
+  </div>
 </footer>

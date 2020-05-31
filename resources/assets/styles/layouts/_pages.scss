@@ -11,12 +11,14 @@ $aside-top-margin: $wrap-top-margin - 0.5rem;
   width: 100%;
   background: #fff;
   margin-top: $navbar-height;
+  padding: 0 $page-left-right-padding;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 
-  .wrap {
-    padding: $wrap-top-margin $page-left-right-padding;
+  .container {
+    padding: $wrap-top-margin 0;
     margin: 0 auto;
     background: white;
+    max-width: none !important;
 
     .content {
       margin-left: 0;
@@ -24,23 +26,21 @@ $aside-top-margin: $wrap-top-margin - 0.5rem;
     }
 
     .main {
+      max-width: $max-text-width !important;
       margin: 0 auto;
       overflow: auto;
-
-      @include media-breakpoint-up(lg) {
-        max-width: $max-text-width;
-      }
     }
   }
 }
 
 .container.container-wide {
   width: 100%;
-  max-width: 100%;
+  max-width: none !important;
+
   .main {
+    max-width: 100% !important;
     padding-left: 4rem;
     padding-right: 4rem;
-    max-width: none;
     overflow: hidden;
   }
 

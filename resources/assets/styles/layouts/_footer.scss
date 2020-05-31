@@ -1,4 +1,4 @@
-$footer-height: 14rem;
+$footer-height: 15rem;
 
 .footer {
   font-size: 80%;
@@ -6,7 +6,7 @@ $footer-height: 14rem;
   color: #fff;
   background-color: $brand-primary;
   border-top: 2rem solid #de5b41;
-  padding-top: 1rem;
+  padding: 1rem $page-left-right-padding 0 $page-left-right-padding;
   height: $footer-height;
 
   @include media-breakpoint-down(xs) {
@@ -19,10 +19,10 @@ $footer-height: 14rem;
 
   .container {
     width: 100%;
-    max-width: $max-text-width + $page-left-right-padding * 2;
-    padding-left: $page-left-right-padding;
-    padding-right: $page-left-right-padding;
+    max-width: $max-text-width;
     margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .footer-title {
@@ -39,7 +39,6 @@ $footer-height: 14rem;
       margin-right: 1rem;
 
       @include media-breakpoint-down(xs) {
-        font-size: 1.5em;
         margin-right: 0.8rem;
       }
       &:hover {
@@ -51,6 +50,12 @@ $footer-height: 14rem;
       display: inline-block;
       color: #fff;
       font-size: 80%;
+
+      @include media-breakpoint-down(xs) {
+        display: block;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+      }
 
       .email-label {
         font-weight: bold;
@@ -76,25 +81,32 @@ $footer-height: 14rem;
 }
 
 .footer-sidebar .container {
-  max-width: $max-text-width + $sidebar-width + $page-left-right-padding * 2;
+  max-width: none;
+  padding: 0;
 
-  @include media-breakpoint-down(lg) {
-    max-width: $max-text-width + $page-left-right-padding * 2;
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+
+    .main {
+      max-width: $max-text-width;
+      margin: 0 auto;
+    }
   }
 }
 
 .footer-wide {
   .container {
     width: 100%;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
     max-width: none;
   }
 
   @include media-breakpoint-down(md) {
     .container {
-      padding-left: 1rem;
-      padding-right: 1rem;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }
