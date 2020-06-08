@@ -17,9 +17,10 @@
       <img class="wp-post-image" src="<?php echo $large_image_url[0] ?>" />
       @php
         } else {
-      @endphp
-      <?php the_custom_header_markup(); ?>
-      @php
+          $custom_header = get_custom_header_markup();
+          if (!empty( $custom_header)) {
+            echo($custom_header);
+          }
         }
       }
       @endphp
