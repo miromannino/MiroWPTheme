@@ -4,8 +4,11 @@
     {!! get_social_links() !!}
   </div>
   <div class="copyrights">
-    <div class="theme-designed">Theme and header images are designed by and are property of Miro Mannino.</div>
-    <div class="proudly-powered">Proudly powered by Wordpress.</div>
+    <div class="reproduction-notice">
+      No reproduction or publication for any content on this site without express prior written permission.
+      <br/>
+      Commercial and editorial licenses are available. Contact me via email for more information. 
+    </div>
     <div class="general-copyrights">© 2004-{!! date('Y') !!} Miro Mannino. All rights reserved.</div>
   </div>
   <div class="other-footer-links">
