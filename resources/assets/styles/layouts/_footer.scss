@@ -1,9 +1,9 @@
 $footer-height: 14rem;
 
 .footer {
+  background-color: $header-and-footer-background-color;
   font-size: 80%;
   width: 100%;
-  background-color: #ececec;
   padding-top: 1rem;
   height: $footer-height;
 
@@ -29,9 +29,11 @@ $footer-height: 14rem;
       @include media-breakpoint-down(xs) {
         margin-right: 0.8rem;
       }
+
       &:hover {
-        color: #000;
+        color: $link-color-hover;
       }
+      
     }
 
     .email-section {
@@ -41,17 +43,26 @@ $footer-height: 14rem;
       .email-label {
         font-weight: bold;
       }
+
+      .email-svg {
+        path,
+        rect {
+          fill: $link-color !important;
+        }
+      }
     }
   }
 
   .copyrights {
     display: block;
 
-    .theme-designed {
+    .reproduction-notice {
+      font-size: 90%;
       margin-right: 1rem;
     }
 
     .general-copyrights {
+      font-size: 90%;
       margin-top: 0.5rem;
     }
   }

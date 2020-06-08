@@ -4,21 +4,44 @@ body {
 }
 
 body {
-  color: #505050;
+  color: $font-color;
+  background-color: $background-color;
   font-weight: 300;
+}
+
+// Scrollbars -----------------
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #cbcbcb;
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+  border: 0.1px solid #b7b7b7;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #909090;
 }
 
 // Formatting -----------------
 a {
   transition: 300ms;
   font-weight: 400;
-
+  color: $link-color;
+  
   &:hover,
   &:active,
   &:visited,
   &:focus {
     text-decoration: none;
     outline: none;
+  }
+
+  &:hover {
+    color: $link-color-hover;
   }
 }
 
@@ -155,36 +178,4 @@ figure.figure {
   position: fixed;
   bottom: 0;
   top: initial;
-}
-
-// Social links ---------------
-.social-links {
-  a {
-    color: #55595c;
-    font-size: 1.8rem;
-    margin-right: 1rem;
-  }
-}
-
-ul.social-links-list {
-  list-style-type: none;
-  padding-left: 0;
-
-  li {
-    margin-bottom: 0.5rem;
-  }
-
-  a {
-    font-size: 1.1rem;
-    color: #55595c;
-    margin-right: 1rem;
-
-    @include media-breakpoint-down(xs) {
-      font-size: 1rem;
-    }
-
-    &:hover {
-      color: $link-color;
-    }
-  }
 }

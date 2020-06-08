@@ -81,6 +81,17 @@
       input[type="submit"] {
         @extend .btn;
         @extend .btn-secondary;
+
+        border-color: $lighter-background-color;
+        box-shadow: none;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: $lighter-background-color;
+          border-color: lighten($lighter-background-color, 30%);
+          box-shadow: none !important;
+        }
       }
     }
   }

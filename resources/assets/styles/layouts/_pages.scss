@@ -6,16 +6,12 @@ $aside-top-margin: $wrap-top-margin - 0.5rem;
 }
 
 .content-container {
-  @include headerBorder("top");
-
   width: 100%;
-  background: #fff;
   padding: 0 $page-left-right-padding;
 
   .container {
     padding: $wrap-top-margin 0;
     margin: 0 auto;
-    background: white;
     max-width: none !important;
 
     .content {
@@ -37,6 +33,7 @@ $aside-top-margin: $wrap-top-margin - 0.5rem;
       .main {
         padding-left: 4rem;
         padding-right: 4rem;
+        width: 100%;
         max-width: none;
       }
 

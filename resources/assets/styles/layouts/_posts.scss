@@ -1,6 +1,6 @@
 // Post, even when it is shown in the list of posts
 article {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 
   h2,
   h3,
@@ -32,21 +32,6 @@ article {
       width: 100%;
       margin-bottom: 0.8rem;
       border: 1px solid $borders-color;
-    }
-  }
-
-  .categories {
-    font-family: $headings-font-family;
-    font-size: 0.8rem;
-    margin-left: 0.1rem;
-
-    a {
-      text-transform: uppercase;
-      color: $ui-link-color;
-      margin-right: 0.4rem;
-      &:hover {
-        color: $link-color;
-      }
     }
   }
 
@@ -91,7 +76,7 @@ article {
   }
 
   .entry-meta-bottom {
-    border-top: 1px solid #ebf2f6;
+    border-top: 1px solid $borders-color;
     padding: 1rem 0;
     margin-top: 2rem;
   }

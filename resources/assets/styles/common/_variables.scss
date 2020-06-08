@@ -1,13 +1,24 @@
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
 
+// Colors
+$font-color: #a0a0a0;
+$link-color: #fff;
+$link-color-hover: #ababab;
+$background-color: #111;
+$lighter-background-color: #1d1d1d;
+$header-and-footer-background-color: $lighter-background-color;
+$borders-color: $lighter-background-color;
+$ui-link-color: #999;
+$ui-link-color-hover: $link-color;
+$ui-link-color-active: darken($ui-link-color, 5%);
+
 // Fonts
 $font-family-sans-serif: "Open Sans", "Helvetica Neue", Arial, sans-serif;
 $font-size-root: 20px !default;
 $font-size-base: 1rem !default;
-
 $headings-font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
-$headings-color: #404040;
+$headings-color: #ebebeb;
 $headings-font-weight: 400;
 $h1-font-size: 2rem !default;
 $h2-font-size: 1.3rem !default;
@@ -32,19 +43,23 @@ $grid-breakpoints: (
   xl: 1200px,
 ) !default;
 
-// Colors
+// Bootstrap
 $theme-colors: (
-  primary: #525ddc,
+  primary: $lighter-background-color,
+  secondary: #ccc,
 );
-$link-color: #000;
-$link-color-hover: darken($link-color, 10%);
-$ui-link-color: #999;
-$ui-link-color-hover: $link-color;
-$ui-link-color-active: darken($ui-link-color, 10%);
+.btn:hover {
+  background-color: $lighter-background-color;
+}
 $brand-primary: $link-color;
-$borders-color: #ebf2f6;
-
-// Navbar
+$input-bg: $lighter-background-color;
+$input-border-color: $lighter-background-color;
+$input-focus-border-color: $lighter-background-color;
+$component-active-bg: $lighter-background-color;
+$input-box-shadow: none;
+$input-focus-box-shadow: none;
+$input-font-weight: 300;
+$input-color: $link-color;
 $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;
 $navbar-light-color: $ui-link-color;
