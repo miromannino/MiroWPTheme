@@ -1,11 +1,8 @@
-$footer-height: 14rem;
-
 .footer {
-  background-color: $header-and-footer-background-color;
   font-size: 80%;
   width: 100%;
   padding-top: 1rem;
-  height: $footer-height;
+  height: 15rem;
 
   @include media-breakpoint-down(xs) {
     font-size: 60%;
@@ -19,21 +16,34 @@ $footer-height: 14rem;
     margin: 0 auto;
   }
 
-  .social-links {
+  .contacts {
     padding-bottom: 0.7rem;
+    display: flex;
+    align-items: center;
 
-    a {
-      font-size: 1.8rem;
-      margin-right: 1rem;
+    .contact-action {
+      display: inline-block;
 
-      @include media-breakpoint-down(xs) {
-        margin-right: 0.8rem;
+      a {
+        margin-right: 1rem;
+  
+        @include media-breakpoint-down(xs) {
+          margin-right: 0.8rem;
+        }
+  
+        &:hover {
+          color: $link-color-hover;
+        }
+        
       }
-
-      &:hover {
-        color: $link-color-hover;
+  
+      .btn {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        line-height: 1.2rem;
+        padding: 0.08rem 0.5rem 0.08rem 0.5rem;
+        display: inline-block;
       }
-      
     }
 
     .email-section {

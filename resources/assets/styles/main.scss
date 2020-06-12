@@ -1,6 +1,7 @@
 @import "common/variables";
 @import "~bootstrap/scss/bootstrap";
 @import "~font-awesome/scss/_variables.scss";
+@import "~beerslider/dist/BeerSlider.css";
 
 $fa-font-path: "~font-awesome/fonts";
 
@@ -17,12 +18,14 @@ $fa-font-path: "~font-awesome/fonts";
 /** Import theme styles */
 @import "common/global";
 @import "common/fonts";
+@import "common/figures";
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";
 @import "components/wp-classes";
 @import "layouts/header";
 @import "layouts/footer";
+@import "layouts/contact";
 @import "layouts/pages";
 @import "layouts/sidebar";
 @import "layouts/posts";

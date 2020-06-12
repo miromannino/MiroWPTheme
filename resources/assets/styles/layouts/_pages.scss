@@ -1,4 +1,4 @@
-$wrap-top-margin: 3rem;
+$wrap-top-margin: 2rem;
 $aside-top-margin: $wrap-top-margin - 0.5rem;
 
 .archive-title {
@@ -8,6 +8,7 @@ $aside-top-margin: $wrap-top-margin - 0.5rem;
 .content-container {
   width: 100%;
   padding: 0 $page-left-right-padding;
+  background-color: $background-color;
 
   .container {
     padding: $wrap-top-margin 0;
@@ -20,6 +21,7 @@ $aside-top-margin: $wrap-top-margin - 0.5rem;
     }
 
     .main {
+      width: 100%;
       max-width: $max-text-width;
       margin: 0 auto;
       overflow: visible;

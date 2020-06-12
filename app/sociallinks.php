@@ -1,30 +1,36 @@
 <?php 
 
 function get_social_links($size = 'fa-2x') {
-  $res = '<div class="social-links">';
+  $res = '<div class="contacts">';
+  if (strlen(get_theme_mod('email_address')) > 0) {
+    $res .= '<div class="contact-action"><a href="' 
+         . site_url() . '/contact'
+         . '"class="btn">Contact me</a></div>';
+  }
+
   if (strlen(get_theme_mod('username_twitter')) > 0) {
-    $res .= '<a target="_blank" href="https://twitter.com/' . get_theme_mod('username_twitter') . '" class="fa ' . $size . ' fa-twitter"></a>';
+    $res .= '<div class="contact-action"><a target="_blank" href="https://twitter.com/' . get_theme_mod('username_twitter') . '" class="fa ' . $size . ' fa-twitter"></a></div>';
   }
   if (strlen(get_theme_mod('username_github')) > 0) {
-    $res .= '<a target="_blank" href="https://github.com/' . get_theme_mod('username_github') . '" class="fa ' . $size . ' fa-github"></a>';
+    $res .= '<div class="contact-action"><a target="_blank" href="https://github.com/' . get_theme_mod('username_github') . '" class="fa ' . $size . ' fa-github"></a></div>';
   }
   if (strlen(get_theme_mod('username_linkedin')) > 0) {
-    $res .= '<a target="_blank" href="https://www.linkedin.com/in/' . get_theme_mod('username_linkedin') . '" class="fa ' . $size . ' fa-linkedin-square"></a>';
+    $res .= '<div class="contact-action"><a target="_blank" href="https://www.linkedin.com/in/' . get_theme_mod('username_linkedin') . '" class="fa ' . $size . ' fa-linkedin-square"></a></div>';
   }
   if (strlen(get_theme_mod('username_wordpress')) > 0) {
-    $res .= '<a target="_blank" href="https://profiles.wordpress.org/' . get_theme_mod('username_wordpress') . '" class="fa ' . $size . ' fa-wordpress"></a>';
+    $res .= '<div class="contact-action"><a target="_blank" href="https://profiles.wordpress.org/' . get_theme_mod('username_wordpress') . '" class="fa ' . $size . ' fa-wordpress"></a></div>';
   }
   if (strlen(get_theme_mod('paypal_donation_link')) > 0) {
-    $res .= '<a target="_blank" href="' . get_theme_mod('paypal_donation_link') . '" class="fa ' . $size . ' fa-cc-paypal"></a>';
+    $res .= '<div class="contact-action"><a target="_blank" href="' . get_theme_mod('paypal_donation_link') . '" class="fa ' . $size . ' fa-cc-paypal"></a></div>';
   }
   if (strlen(get_theme_mod('username_instagram')) > 0) {
-    $res .= '<a target="_blank" href="https://www.instagram.com/' . get_theme_mod('username_instagram') . '" class="fa ' . $size . ' fa-instagram"></a>';
+    $res .= '<div class="contact-action"><a target="_blank" href="https://www.instagram.com/' . get_theme_mod('username_instagram') . '" class="fa ' . $size . ' fa-instagram"></a></div>';
   }
   if (strlen(get_theme_mod('username_flickr')) > 0) {
-    $res .= '<a target="_blank" href="https://www.flickr.com/photos/' . get_theme_mod('username_flickr') . '" class="fa ' . $size . ' fa-flickr"></a>';
+    $res .= '<div class="contact-action"><a target="_blank" href="https://www.flickr.com/photos/' . get_theme_mod('username_flickr') . '" class="fa ' . $size . ' fa-flickr"></a></div>';
   }
   if (strlen(get_theme_mod('username_youtube')) > 0) {
-    $res .= '<a target="_blank" href="https://www.youtube.com/user/' . get_theme_mod('username_youtube') . '" class="fa ' . $size . ' fa-youtube-square"></a>';
+    $res .= '<div class="contact-action"><a target="_blank" href="https://www.youtube.com/user/' . get_theme_mod('username_youtube') . '" class="fa ' . $size . ' fa-youtube-square"></a></div>';
   }
   if (strlen(get_theme_mod('email_address_svg_code')) > 0) {
     $res .= '<div class="email-section"><div class="email-label">email</div><div class="email-svg">' . get_theme_mod('email_address_svg_code') . '</div></div>';

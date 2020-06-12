@@ -16,7 +16,7 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
   ]);
 
   $wp_customize->add_section('miro_theme_contacts', array(
-    'title' => __('Social contacts', 'miro'),
+    'title' => __('Contacts', 'miro'),
     'priority' => 30,
   ));
 
@@ -98,6 +98,16 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
     'label' => __('Instagram username', 'sage'),
     'section' => 'miro_theme_contacts',
     'settings' => 'username_instagram',
+    'type' => 'text'
+  )));
+
+  $wp_customize->add_setting('email_address', array(
+    'default' => ''
+  ));
+  $wp_customize->add_control(new \WP_Customize_Control($wp_customize, 'email_address', array(
+    'label' => __('Email', 'sage'),
+    'section' => 'miro_theme_contacts',
+    'settings' => 'email_address',
     'type' => 'text'
   )));
 
