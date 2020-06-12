@@ -1,4 +1,6 @@
 import * as d3 from 'd3';
+import $ from 'jquery';
+import BeerSlider from 'beerslider';
 
 export default {
   init() {
@@ -22,17 +24,22 @@ export default {
     d3.select('#svg-miromannino').on('mouseenter', titleMouseEnter);
     d3.select('#svg-miromannino').on('mouseleave', titleMouseLeave);
 
-    // Change the status of header to make it not transparent, 
-    // in case the header is not visible anymore
-    var $window = $(window);
-    var headImgHeight = $('.header-img-container').height();
-    var navbar = $('header > nav');
-    $window.on('scroll', function () {
-      if ($window.scrollTop() > headImgHeight) {
-        navbar.addClass('scrolled-header');
-      } else {
-        navbar.removeClass('scrolled-header');
-      }
+    // BeerSlider before/after photos
+    $.fn.BeerSlider = function ( options ) {
+      options = options || {};
+      return this.each(function() {
+        new BeerSlider(this, options);
+      });
+    };
+    $('.beer-slider').each(function( index, el ) {
+      $(el).BeerSlider({start: $(el).data('beer-start')});
+      console.log('initialized beerslider' , el);
+    });
+
+    // Contact me button
+    $('.contact-me-button').click(function () {
+      console.log('contact me');
+      $('#contact-me-modal').modal();
     });
 
   },

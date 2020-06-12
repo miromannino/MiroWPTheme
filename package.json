@@ -63,6 +63,7 @@
     "yargs": "~11.0.0"
   },
   "dependencies": {
+    "beerslider": "^1.0.3",
     "bootstrap": "v4.3.1",
     "d3": "^5.16.0",
     "font-awesome": "^4.7.0",
