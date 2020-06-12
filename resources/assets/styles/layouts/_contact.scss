@@ -1,0 +1,31 @@
+div.wpcf7 {
+  p {
+    @extend .form-group;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  textarea {
+    @extend .form-control;
+
+    outline: none;
+    width: 100%;
+  }
+
+  label {
+    width: 100%;
+  }
+
+  .ajax-loader {
+    content: "sending...";
+    background-image: none;
+    width: 0;
+    height: 2rem;
+
+    &::before {
+      content: "sending...";
+      margin-left: 0.5rem;
+    }
+  }
+}

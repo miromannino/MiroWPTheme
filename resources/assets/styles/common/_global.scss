@@ -5,7 +5,7 @@ body {
 
 body {
   color: $font-color;
-  background-color: $background-color;
+  background-color: $header-and-footer-background-color;
   font-weight: 300;
 }
 
@@ -131,16 +131,8 @@ h6.noanchor {
   overflow: hidden;
 }
 
-figure.figure {
-  display: block;
-
-  .figure-caption {
-    font-size: 70%;
-  }
-
-  img {
-    max-width: 100%;
-  }
+.grecaptcha-badge {
+  visibility: hidden;
 }
 
 // Fade in --------------------

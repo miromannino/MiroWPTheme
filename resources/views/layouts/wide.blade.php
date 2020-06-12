@@ -10,19 +10,10 @@
 
     <div class="header-img-container">
       @php
-      if (!is_front_page()) {
-        if (has_post_thumbnail() && (is_single() || is_page())) {
-          $large_image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'post-thumbnail');
-      @endphp
-      <img class="wp-post-image" src="<?php echo $large_image_url[0] ?>" />
-      @php
-        } else {
-          $custom_header = get_custom_header_markup();
-          if (!empty( $custom_header)) {
-            echo($custom_header);
-          }
+        $custom_header = get_custom_header_markup();
+        if (!empty( $custom_header)) {
+          echo($custom_header);
         }
-      }
       @endphp
     </div>
     

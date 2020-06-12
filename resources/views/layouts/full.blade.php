@@ -9,7 +9,12 @@
     @include('partials.header')
 
     <div class="header-img-container">
-        <!-- No image for this kind of page-->
+      @php
+        $custom_header = get_custom_header_markup();
+        if (!empty( $custom_header)) {
+          echo($custom_header);
+        }
+      @endphp
     </div>
     
     <div class="content-container content-container-full">
