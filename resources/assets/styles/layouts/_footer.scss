@@ -21,6 +21,23 @@
     display: flex;
     align-items: center;
 
+    .contact-me-action-separator {
+      display: none;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: block;
+      align-items: center;
+
+      .contact-me-action {
+        margin-bottom: 0.5rem;
+      }
+
+      .contact-me-action-separator {
+        display: block;
+      }
+    }
+
     .contact-action {
       display: inline-block;
 

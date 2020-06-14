@@ -12,6 +12,7 @@
 input[type="submit"] {
   @extend .btn;
 
+  white-space: nowrap;
   background-color: $link-color;
   color: $background-color !important;
   border: none;

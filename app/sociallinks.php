@@ -3,9 +3,9 @@
 function get_social_links($size = 'fa-2x') {
   $res = '<div class="contacts">';
   if (strlen(get_theme_mod('email_address')) > 0) {
-    $res .= '<div class="contact-action"><a href="' 
+    $res .= '<div class="contact-action contact-me-action"><a href="' 
          . site_url() . '/contact'
-         . '"class="btn">Contact me</a></div>';
+         . '"class="btn">Contact me</a></div><br class="contact-me-action-separator"/>';
   }
 
   if (strlen(get_theme_mod('username_twitter')) > 0) {
