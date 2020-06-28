@@ -170,3 +170,9 @@ h6.noanchor {
   bottom: 0;
   top: initial;
 }
+
+// Beer Slider ----------------
+.beer-reveal[data-beer-label]:after, .beer-slider[data-beer-label]:after {
+  padding: .2rem .3rem !important;
+  font-size: 80%;
+}
