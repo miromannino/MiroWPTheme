@@ -8,6 +8,23 @@ body {
   font-weight: 300;
 }
 
+// Scrollbars -----------------
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #cbcbcb;
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+  border: 0.1px solid #b7b7b7;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #909090;
+}
+
 // Formatting -----------------
 a {
   transition: 300ms;
