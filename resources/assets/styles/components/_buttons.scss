@@ -11,6 +11,13 @@
   color: #fff;
   background-color: $link-color;
   border-color: $link-color;
+
+  &:hover {
+    color: #fff;
+    background-color: $link-color-hover;
+    border-color: $link-color;
+  }
+
 }
 
 .btn-secondary {
