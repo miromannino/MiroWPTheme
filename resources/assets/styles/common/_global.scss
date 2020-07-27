@@ -44,6 +44,11 @@ a {
   }
 }
 
+strong {
+  font-weight: 400;
+  color: $strong-text-color;
+}
+
 h2 {
   margin-top: 2rem;
   margin-bottom: 1rem;
