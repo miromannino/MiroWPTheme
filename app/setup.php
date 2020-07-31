@@ -97,6 +97,13 @@ add_action('the_post', function ($post) {
 });
 
 /**
+ * To remove the header top margin
+ */ 
+add_action('get_header', function () {
+    remove_action('wp_head', '_admin_bar_bump_cb');
+});
+
+/**
  * Setup Sage options
  */
 add_action('after_setup_theme', function () {
