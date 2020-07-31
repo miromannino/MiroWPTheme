@@ -1,3 +1,5 @@
+@import "common/variables";
+
 html,
 body {
   height: 100%;
@@ -11,16 +13,16 @@ body {
 
 // Scrollbars -----------------
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 7px;
 }
 ::-webkit-scrollbar-track-piece {
-  background-color: #fff;
+  background-color: $lighter-background-color;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #cbcbcb;
-  outline: 2px solid #fff;
+  background-color: #444;
+  outline: 2px solid #444;
   outline-offset: -2px;
-  border: 0.1px solid #b7b7b7;
+  border: 0.1px solid #444;
 }
 ::-webkit-scrollbar-thumb:hover {
   background-color: #909090;
