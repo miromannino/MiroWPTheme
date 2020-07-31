@@ -67,7 +67,7 @@ add_action('after_setup_theme', function () {
     remove_filter('the_excerpt', 'wpautop');
 
     // Disable admin bar
-    show_admin_bar(false);
+    show_admin_bar(true);
 
 }, 20);
 
