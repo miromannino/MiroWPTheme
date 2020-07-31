@@ -1,5 +1,6 @@
 html,
 body {
+  margin: 0 !important;
   height: 100%;
 }
 
@@ -10,7 +11,7 @@ body {
 
 // Scrollbars -----------------
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 7px;
 }
 ::-webkit-scrollbar-track-piece {
   background-color: #fff;
