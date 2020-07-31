@@ -66,9 +66,6 @@ add_action('after_setup_theme', function () {
     remove_filter('the_content', 'wpautop');
     remove_filter('the_excerpt', 'wpautop');
 
-    // Disable admin bar
-    show_admin_bar(true);
-
 }, 20);
 
 /**
@@ -97,6 +94,13 @@ add_action('widgets_init', function () {
  */
 add_action('the_post', function ($post) {
     sage('blade')->share('post', $post);
+});
+
+/**
+ * To remove the header top margin
+ */ 
+add_action('get_header', function () {
+    remove_action('wp_head', '_admin_bar_bump_cb');
 });
 
 /**
