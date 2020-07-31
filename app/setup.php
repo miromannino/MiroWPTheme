@@ -97,10 +97,20 @@ add_action('the_post', function ($post) {
 });
 
 /**
- * To remove the header top margin
+ * Header changes
  */ 
 add_action('get_header', function () {
     remove_action('wp_head', '_admin_bar_bump_cb');
+});
+add_action( 'wp_head', function () {
+    echo '
+    <style type="text/css">
+    body {margin-top: -28px;padding-bottom: 28px;}
+    body.admin-bar #wphead {padding-top: 0;}
+    body.admin-bar #footer {padding-bottom: 28px;}
+    #wpadminbar { top: auto !important;bottom: 0;}
+    #wpadminbar .quicklinks .menupop ul { bottom: 28px;}
+    </style>';
 });
 
 /**
