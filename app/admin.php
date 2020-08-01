@@ -101,16 +101,6 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
     'type' => 'text'
   )));
 
-  $wp_customize->add_setting('email_address', array(
-    'default' => ''
-  ));
-  $wp_customize->add_control(new \WP_Customize_Control($wp_customize, 'email_address', array(
-    'label' => __('Email', 'sage'),
-    'section' => 'miro_theme_contacts',
-    'settings' => 'email_address',
-    'type' => 'text'
-  )));
-
   $wp_customize->add_setting('email_address_svg_code', array(
     'default' => ''
   ));
@@ -121,6 +111,22 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
     'type' => 'textarea'
   )));
 
+  // SVG Title
+  $wp_customize->add_section('miro_theme_header_title_svg', array(
+    'title' => __('Header Title SVG', 'miro'),
+    'priority' => 30,
+  ));
+  $wp_customize->add_setting('header_title_svg', array(
+    'default' => ''
+  ));
+  $wp_customize->add_control(new \WP_Customize_Control($wp_customize, 'header_title_svg', array(
+    'label' => __('Header Title SVG', 'sage'),
+    'section' => 'miro_theme_header_title_svg',
+    'settings' => 'header_title_svg',
+    'type' => 'textarea'
+  )));
+
+  // Google Analytics tracker
   $wp_customize->add_section('miro_theme_ganalytics_tracker', array(
     'title' => __('Google Analytics tracker', 'miro'),
     'priority' => 30,
@@ -135,6 +141,7 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
     'type' => 'textarea'
   )));
 
+  // Twitter tracker
   $wp_customize->add_section('miro_theme_twitter_tracker', array(
     'title' => __('Twitter tracker', 'miro'),
     'priority' => 30,
@@ -149,6 +156,7 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
     'type' => 'textarea'
   )));
 
+  // Privacy policy link
   $wp_customize->add_section('miro_theme_privacy_policy', array(
     'title' => __('Privacy policy', 'miro'),
     'priority' => 30,
@@ -162,6 +170,7 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
     'settings' => 'privacy_policy_extended_link',
     'type' => 'url'
   )));
+
 });
 
 /**
