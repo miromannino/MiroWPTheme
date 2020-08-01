@@ -171,6 +171,18 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
     'type' => 'url'
   )));
 
+  // Show or hide pages titles
+  $wp_customize->add_setting('show_page_titles', array(
+    'default' => ''
+  ));
+  $wp_customize->add_control(new \WP_Customize_Control($wp_customize, 'show_page_titles', array(
+    'label' => __('Show Pages Title', 'sage'),
+    'section' => 'title_tagline',
+    'settings' => 'show_page_titles',
+    'type' => 'checkbox',
+    'std' => '1'
+  )));
+
 });
 
 /**
