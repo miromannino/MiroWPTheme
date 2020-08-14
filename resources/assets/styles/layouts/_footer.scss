@@ -10,10 +10,16 @@
 
   .container {
     width: 100%;
-    max-width: $max-text-width + $page-left-right-padding * 2;
-    padding-left: $page-left-right-padding;
-    padding-right: $page-left-right-padding;
+    max-width: none;
+    padding-left: $page-left-right-padding * 2;
+    padding-right: $page-left-right-padding * 2;
     margin: 0 auto;
+
+    @include media-breakpoint-down(md) {
+      padding-left: $page-left-right-padding;
+      padding-right: $page-left-right-padding;
+    }
+  
   }
 
   .contacts {
@@ -108,20 +114,28 @@
 }
 
 .footer-wide {
+  
   .container {
     width: 100%;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left: $page-left-right-padding * 3;
+    padding-right: $page-left-right-padding * 3;
     max-width: none;
   }
 
-  @include media-breakpoint-down(sm) {
-    // means: @media (max-width: 543px) {
+  @include media-breakpoint-down(md) {
     .container {
-      padding-left: 1.2rem;
-      padding-right: 1.2rem;
+      padding-left: $page-left-right-padding * 2;
+      padding-right: $page-left-right-padding * 2;
     }
   }
+
+  @include media-breakpoint-down(sm) {
+    .container {
+      padding-left: $page-left-right-padding;
+      padding-right: $page-left-right-padding;
+    }
+  }
+
 }
 
 .footer-full {

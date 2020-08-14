@@ -33,19 +33,26 @@ $aside-top-margin: $wrap-top-margin - 0.5rem;
       width: 100%;
       max-width: 100%;
       .main {
-        padding-left: 4rem;
-        padding-right: 4rem;
+        padding-left: $page-left-right-padding * 2;
+        padding-right: $page-left-right-padding * 2;
         width: 100%;
         max-width: none;
       }
 
       @include media-breakpoint-down(md) {
-        // means: @media (max-width: 543px) {
+        .main {
+          padding-left: $page-left-right-padding;
+          padding-right: $page-left-right-padding;
+        }
+      }
+
+      @include media-breakpoint-down(sm) {
         .main {
           padding-left: 0;
           padding-right: 0;
         }
       }
+
     }
   }
 
