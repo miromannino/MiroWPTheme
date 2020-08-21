@@ -10,7 +10,7 @@
 
   .container {
     width: 100%;
-    max-width: none;
+    max-width: $max-page-width-wide;
     padding-left: $page-left-right-padding * 2;
     padding-right: $page-left-right-padding * 2;
     margin: 0 auto;
@@ -106,10 +106,10 @@
 }
 
 .footer-sidebar .container {
-  max-width: $max-text-width + $sidebar-width + $page-left-right-padding * 2;
+  max-width: $max-page-width + $sidebar-width + $page-left-right-padding * 2;
 
   @include media-breakpoint-down(lg) {
-    max-width: $max-text-width + $page-left-right-padding * 2;
+    max-width: $max-page-width + $page-left-right-padding * 2;
   }
 }
 
@@ -119,7 +119,7 @@
     width: 100%;
     padding-left: $page-left-right-padding * 3;
     padding-right: $page-left-right-padding * 3;
-    max-width: none;
+    max-width: $max-page-width-wide;
   }
 
   @include media-breakpoint-down(md) {

@@ -7,7 +7,7 @@ $aside-top-margin: $wrap-top-margin - 0.5rem;
 
 .content-container {
   width: 100%;
-  padding: 0 $page-left-right-padding;
+  padding: 0;
   background-color: $background-color;
 
   .container {
@@ -22,7 +22,7 @@ $aside-top-margin: $wrap-top-margin - 0.5rem;
 
     .main {
       width: 100%;
-      max-width: $max-text-width;
+      max-width: $max-page-width;
       margin: 0 auto;
       overflow: visible;
     }
@@ -33,23 +33,23 @@ $aside-top-margin: $wrap-top-margin - 0.5rem;
       width: 100%;
       max-width: 100%;
       .main {
-        padding-left: $page-left-right-padding * 2;
-        padding-right: $page-left-right-padding * 2;
+        padding-left: $page-left-right-padding * 3;
+        padding-right: $page-left-right-padding * 3;
         width: 100%;
-        max-width: none;
+        max-width: $max-page-width-wide;
       }
 
       @include media-breakpoint-down(md) {
         .main {
-          padding-left: $page-left-right-padding;
-          padding-right: $page-left-right-padding;
+          padding-left: $page-left-right-padding * 2;
+          padding-right: $page-left-right-padding * 2;
         }
       }
 
       @include media-breakpoint-down(sm) {
         .main {
-          padding-left: 0;
-          padding-right: 0;
+          padding-left: $page-left-right-padding;
+          padding-right: $page-left-right-padding;
         }
       }
 

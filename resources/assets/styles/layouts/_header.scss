@@ -1,10 +1,15 @@
 $navbar-height: $navbar-padding-y * 2 + $navbar-brand-margin-y * 2 + $navbar-brand-img-height;
 
+.navbar-container {
+  background-color: $header-and-footer-background-color;
+}
+
 header.banner {
 
   &.banner-wide {
 
-    > nav.navbar {
+    nav.navbar {
+      max-width: $max-page-width-wide;
       padding: $navbar-padding-y $page-left-right-padding * 3;
 
       @include media-breakpoint-down(md) {
@@ -15,13 +20,12 @@ header.banner {
         padding: $navbar-padding-y $page-left-right-padding;
       }
     }
-
-    
     
   }
 
-  > nav.navbar {
-    background-color: $header-and-footer-background-color;
+  nav.navbar {
+    margin: auto;
+    max-width: $max-page-width-wide;
     padding: $navbar-padding-y $page-left-right-padding * 2;
 
     @include media-breakpoint-down(md) {
