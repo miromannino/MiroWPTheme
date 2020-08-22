@@ -20,7 +20,7 @@
     <div class="content-container">
       <div class="wrap container fadeIn" role="document">
         <div class="content row">
-          <main class="main">
+          <main class="main col-12">
             @yield('content')
           </main>
           @if (App\display_sidebar())

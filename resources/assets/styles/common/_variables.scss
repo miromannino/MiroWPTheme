@@ -49,6 +49,7 @@ $theme-colors: (
   primary: $lighter-background-color,
   secondary: #ccc,
 );
+$grid-gutter-width: 2rem;
 $brand-primary: $link-color;
 $input-bg: $lighter-background-color;
 $input-border-color: $lighter-background-color;
@@ -75,5 +76,5 @@ $navbar-height: $navbar-padding-y * 2 + $navbar-brand-margin-y * 2 + $navbar-bra
 $max-page-width: 36rem;
 $max-page-width-wide: 60rem;
 $sidebar-width: 12rem;
-$page-left-right-padding: 1rem;
+$page-left-right-padding: $grid-gutter-width / 2;
 
