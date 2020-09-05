@@ -5,6 +5,6 @@ dist
 node_modules
 npm-debug.log
 yarn-error.log
-/vendor
+vendor
 resources/assets/config-local.json
 .DS_Store
