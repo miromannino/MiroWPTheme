@@ -1,0 +1,32 @@
+@import "common/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~font-awesome/scss/_variables.scss";
+@import "~beerslider/dist/BeerSlider.css";
+
+$fa-font-path: "~font-awesome/fonts";
+
+@import "~font-awesome/scss/font-awesome.scss";
+
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+// @import "~some-node-module";
+
+/** Import theme styles */
+@import "common/global";
+@import "common/fonts";
+@import "common/figures";
+@import "components/buttons";
+@import "components/comments";
+@import "components/forms";
+@import "components/wp-classes";
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/contact";
+@import "layouts/pages";
+@import "layouts/sidebar";
+@import "layouts/posts";
+@import "layouts/tinymce";

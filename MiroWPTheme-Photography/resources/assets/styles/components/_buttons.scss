@@ -1,0 +1,46 @@
+.btn-list {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  .btn {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.btn,
+.btn-primary,
+input[type="submit"] {
+  @extend .btn;
+
+  white-space: nowrap;
+  background-color: $link-color;
+  color: $background-color !important;
+  border: none;
+  box-shadow: none !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $background-color !important;
+    background-color: $link-color-hover;
+    cursor: pointer;
+    box-shadow: none !important;
+  }
+}
+
+.btn-secondary {
+  background-color: $lighter-background-color;
+  color: $link-color-hover !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $lighter-background-color;
+    color: $link-color !important;
+  }
+}
+
+.btn-xs {
+  padding: 0.1rem 0.5rem;
+  font-size: 80%;
+}

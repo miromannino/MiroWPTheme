@@ -1,0 +1,114 @@
+$navbar-height: $navbar-padding-y * 2 + $navbar-brand-margin-y * 2 + $navbar-brand-img-height;
+
+.navbar-container {
+  background-color: $header-and-footer-background-color;
+}
+
+header.banner {
+
+  &.banner-wide {
+
+    nav.navbar {
+      max-width: $max-page-width-wide;
+      padding: $navbar-padding-y $page-left-right-padding * 3;
+
+      @include media-breakpoint-down(md) {
+        padding: $navbar-padding-y $page-left-right-padding * 2;
+      }
+    
+      @include media-breakpoint-down(sm) {
+        padding: $navbar-padding-y $page-left-right-padding;
+      }
+    }
+    
+  }
+
+  nav.navbar {
+    margin: auto;
+    max-width: $max-page-width-wide;
+    padding: $navbar-padding-y $page-left-right-padding * 2;
+
+    @include media-breakpoint-down(md) {
+      padding: $navbar-padding-y $page-left-right-padding;
+    }
+  
+    // Just Bootstrap 4 navbar insanity... I hope they will fix it
+    @include media-breakpoint-down(sm) {
+      // means: @media (max-width: 543px) {
+      .navbar-brand {
+        float: none;
+        top: 0;
+        position: relative;
+      }
+    }
+
+    #navbarResponsive {
+      justify-content: flex-end;
+    }
+
+    .navbar-brand {
+      margin-top: $navbar-brand-margin-y;
+      margin-bottom: $navbar-brand-margin-y;
+      outline: none;
+      display: inline-block;
+      height: $navbar-brand-img-height;
+
+      @include media-breakpoint-down(sm) {
+        width: 8rem;
+      }
+
+      > svg {
+        vertical-align: baseline;
+        height: $navbar-brand-img-height;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .menu-item {
+      padding-top: 0.2rem;
+      margin: 0 0 0 2rem;
+
+      a {
+        font-size: 80%;
+        font-weight: 300;
+      }
+
+      .nav-link {
+        padding-top: 0.35rem;
+        padding-bottom: 0.425rem;
+      }
+    }
+
+    .navbar-toggler {
+      height: 2.2rem;
+      margin-top: 0.2rem;
+      margin-bottom: 0;
+      outline: none;
+      border: 0;
+
+      .navbar-toggler-icon {
+        background-image: str-replace(url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#aaa' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"), "#", "%23");
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+  }
+
+}
+
+.header-img-container {
+  margin-top: $navbar-height;
+  z-index: -2;
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

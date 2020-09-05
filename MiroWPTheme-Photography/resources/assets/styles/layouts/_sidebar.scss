@@ -1,0 +1,52 @@
+aside.sidebar {
+  padding-top: $aside-top-margin;
+  width: $sidebar-width;
+
+  h3 {
+    text-transform: uppercase;
+  }
+
+  .widget_categories {
+    ul {
+      padding: 0;
+
+      li.cat-item {
+        font-family: $headings-font-family;
+        text-transform: uppercase;
+        color: lighten($ui-link-color, 10%);
+        list-style: none;
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+
+        .children {
+          padding-left: 1rem;
+        }
+
+        a {
+          color: $ui-link-color;
+
+          &:hover {
+            color: $ui-link-color-hover;
+          }
+        }
+
+        &.current-cat {
+          a {
+            color: $ui-link-color-active;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  aside.sidebar {
+    margin: 0 0 auto 0;
+    border-top: 1px solid #ebf2f6;
+    ul.children li {
+      display: inline-block;
+      margin-right: 1rem;
+    }
+  }
+}
