@@ -1,11 +1,9 @@
 /** Search form */
 .search-form {
-  @extend .form-inline;
+  margin-bottom: 0;
 }
 
 .search-form label {
-  @extend .form-group;
-
   font-weight: normal;
 }
 

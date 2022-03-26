@@ -1,5 +1,17 @@
 <article @php post_class() @endphp>
   <header>
+    <div class="entry-meta-top">
+      @php 
+      $cat_list = get_the_category_list(' ');
+      if ($cat_list) { 
+        ?>
+        <div class="categories">
+          <?php echo $cat_list; ?>
+        </div>
+        <?php 
+      } 
+      @endphp
+    </div>
     <h1 class="entry-title">{!! get_the_title() !!}</h1>
     @include('partials/entry-meta')
   </header>

@@ -62,7 +62,7 @@
     margin-top: 2rem;
     .comment-form {
       p {
-        @extend .form-group;
+        margin-bottom: 1rem;
       }
       input[type="text"],
       input[type="email"],

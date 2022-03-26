@@ -1,6 +1,7 @@
 <div class="container">
   {!! get_social_links() !!}
   <div class="copyrights">
+    <!-- TODO -->
     <div class="reproduction-notice">
       No reproduction or publication for any content on this site without express prior written permission.
       <br />

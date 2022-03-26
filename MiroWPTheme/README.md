@@ -1,15 +1,10 @@
 ![screenshot](https://github.com/miromannino/MiroWPTheme/blob/resources/miro-wp-theme-project-image.png)
 
-Miro is a Minimal, Clean and Responsive WordPress Theme with random animated headers. Theme is customisable with theme options: social buttons to display, twitter tracker, privacy policy link, and other parts of the layout. A set of shortcodes will help you to generate complex portfolios. Realised using Bootstrap 4, it brings all of its power in your blog.
-
-
+Miro is a Minimal, Clean and Responsive WordPress Theme with random animated headers. Theme is customisable with theme options: social buttons to display, twitter tracker, privacy policy link, and other parts of the layout. A set of shortcodes will help you to generate complex portfolios. 
 
 ## Live Demo
 
 [miromannino.com](http://miromannino.com)
-
-
-
 
 ## Features
 
@@ -21,7 +16,6 @@ From the Theme options, you can configure the social buttons: Twitter, GitHub, L
 
 The social buttons can be also displayed anywhere using the shortcode <code>[social-links]</code> as a series of icons, or using the shortcode <code>[social-links-list]</code> to show as a list of links.
 
-
 ### Portfolio
 
 You can build a portfolio like the following one:
@@ -30,17 +24,13 @@ You can build a portfolio like the following one:
 
 In order to make a similar one, follow the example in [portfolio_test.html](https://github.com/miromannino/MiroWPTheme/blob/master/assets/scripts/portfolio_test.html)
 
-
 ### Title links
 
 Each title is modified to add a hash character, that let sections of a post to be easily referenced.
 
-
-
 ## Theme development
 
 The theme is based on Sage, a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and Bootstrap Sass.
-
 
 ### Requirements
 
@@ -55,7 +45,7 @@ Make sure all dependencies have been installed before moving on:
 ### Theme structure
 
 ```shell
-themes/your-theme-name/   # → Root of your Sage based theme
+themes/your-theme-name/   # → Root of your theme
 ├── app/                  # → Theme PHP
 │   ├── Controllers/      # → Controller files
 │   ├── admin.php         # → Theme customizer setup
@@ -91,7 +81,7 @@ themes/your-theme-name/   # → Root of your Sage based theme
 * Run `yarn` from the theme directory to install dependencies
 * Update `resources/assets/config.json` settings:
   * `devUrl` should reflect your local development hostname
-  * `publicPath` should reflect your WordPress folder structure (e.g. `/wp-content/themes/sage`)
+  * `publicPath` should reflect your WordPress folder structure (e.g. `/wp-content/themes/theme_name`)
 
 ### Build commands
 

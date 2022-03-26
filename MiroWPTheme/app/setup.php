@@ -12,10 +12,15 @@ use Roots\Sage\Template\BladeProvider;
  */
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
-    wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
+    wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), [], null, true);
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
+    }
+
+    if (is_admin()) {
+        wp_deregister_script('jquery');
+        wp_register_script('jquery', false);
     }
 }, 100);
 
@@ -97,10 +102,20 @@ add_action('the_post', function ($post) {
 });
 
 /**
- * To remove the header top margin
+ * Header changes
  */ 
 add_action('get_header', function () {
     remove_action('wp_head', '_admin_bar_bump_cb');
+});
+add_action( 'wp_head', function () {
+    echo '
+    <style type="text/css">
+    body {margin-top: -28px;padding-bottom: 28px;}
+    body.admin-bar #wphead {padding-top: 0;}
+    body.admin-bar #footer {padding-bottom: 28px;}
+    #wpadminbar { top: auto !important;bottom: 0;}
+    #wpadminbar .quicklinks .menupop ul { bottom: 28px;}
+    </style>';
 });
 
 /**
@@ -138,15 +153,17 @@ add_action('after_setup_theme', function () {
  * Determine which pages should NOT display the sidebar
  */
 add_filter('sage/display_sidebar', function ($display) {
-  static $display;
-
-  isset($display) || $display = !in_array(true, [
-    // The sidebar will NOT be displayed if ANY of the following return true.
-    is_page(),
-    is_single(),
-    is_404(),
-    is_page_template('template-custom.php')
-  ]);
-
-  return $display;
-});
+    static $display;
+  
+    isset($display) || $display = !in_array(true, [
+      // The sidebar will NOT be displayed if ANY of the following return true.
+      is_front_page(),
+      is_home(),
+      is_page(),
+      is_single(),
+      is_404(),
+      is_page_template('template-custom.php')
+    ]);
+  
+    return $display;
+  });

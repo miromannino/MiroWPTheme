@@ -28,6 +28,7 @@ body {
 // Formatting -----------------
 a {
   transition: 300ms;
+  text-decoration: none;
 
   &:hover,
   &:active,
