@@ -963,6 +963,11 @@ braces@^3.0.1, braces@~3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
+bricklayer@^0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/bricklayer/-/bricklayer-0.4.3.tgz#ee8fff745d023eed53d56cb6e8602f9921d5096b"
+  integrity sha512-dN/KwBAARBaX2TBvj4WKzn5HLN2YCpx9ebGPZ3ajPJg1qq8NY3F/jVXBys5UaSvRL3Sl778CzrTx8T5EZ2xBfw==
+
 brorand@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/brorand/-/brorand-1.1.0.tgz#12c25efe40a45e3c323eb8675a0a0ce57b22371f"
@@ -6446,6 +6451,13 @@ minimist@^1.1.0, minimist@^1.1.3, minimist@^1.2.0, minimist@^1.2.5:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
   integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
 
+"miro-d3-animated-headers@https://github.com/miromannino/Miro-D3-Animated-Headers":
+  version "1.0.0"
+  uid "39ccc94577b26d1c364fbda258a973e7f59f8b7f"
+  resolved "https://github.com/miromannino/Miro-D3-Animated-Headers#39ccc94577b26d1c364fbda258a973e7f59f8b7f"
+  dependencies:
+    d3 "^5.16.0"
+
 mississippi@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/mississippi/-/mississippi-2.0.0.tgz#3442a508fafc28500486feea99409676e4ee5a6f"
@@ -10063,9 +10075,9 @@ typedarray@^0.0.6:
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
 ua-parser-js@^0.7.18:
-  version "0.7.21"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.21.tgz#853cf9ce93f642f67174273cc34565ae6f308777"
-  integrity sha512-+O8/qh/Qj8CgC6eYBVBykMrNtp5Gebn4dlGD/kKXVkJNDwyrAwSIqwz8CDf+tsAIWVycKcku6gIXJ0qwx/ZXaQ==
+  version "0.7.33"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.33.tgz#1d04acb4ccef9293df6f70f2c3d22f3030d8b532"
+  integrity sha512-s8ax/CeZdK9R/56Sui0WM6y9OFREJarMRHqLB2EwkovemBxNQ+Bqu8GAsUnVcXKgphb++ghr/B2BZx4mahujPw==
 
 uglify-es@^3.3.4:
   version "3.3.9"
